@@ -339,17 +339,33 @@ body {
   border-radius: var(--radius-lg);
   padding: 20px;
   box-shadow: var(--shadow-sm);
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   display: flex;
   flex-direction: column;
   position: relative;
-  transition: all 0.2s ease;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+}
+
+.office-card.is-clickable {
+  cursor: pointer;
+}
+
+.office-card.is-clickable:hover {
+  border-color: var(--bruno-green);
+  box-shadow: var(--shadow-md);
+}
+
+.office-card.is-clickable:active {
+  transform: scale(0.985);
+  background-color: #FAFCF9;
 }
 
 .office-card.is-locked {
   border-color: var(--bruno-blue);
   background: linear-gradient(180deg, #F0F7FC 0%, #FFFFFF 100%);
   box-shadow: 0 4px 16px rgba(0, 108, 181, 0.12);
+  cursor: default;
 }
 
 .office-header {

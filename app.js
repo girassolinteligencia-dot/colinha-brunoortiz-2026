@@ -266,8 +266,13 @@ function renderOffice() {
 
   if (isBruno) {
     officeCard.classList.add('is-locked');
+    officeCard.classList.remove('is-clickable');
+    officeCard.onclick = null;
   } else {
     officeCard.classList.remove('is-locked');
+    officeCard.classList.add('is-clickable');
+    // Clicar em qualquer lugar do card abre diretamente o seletor de candidatos
+    officeCard.onclick = () => openCandidateModal(currentOffice);
   }
 
   // Renderizar Dígitos
@@ -297,63 +302,42 @@ function renderOffice() {
       <div class="candidate-info-text">
         <div class="candidate-selected-name">${selectedVote.name}</div>
         <div class="candidate-selected-party">${selectedVote.party || ''} • Nº ${selectedVote.number}</div>
-        ${isBruno ? `<div class="locked-badge">🔒 Seu voto já está aqui!</div>` : ''}
+        ${isBruno ? `<div class="locked-badge">🔒 Seu voto já está aqui!</div>` : '<div style="font-size: 0.8rem; color: var(--bruno-blue); font-weight: 600; margin-top: 4px;">Toque no cartão para alterar</div>'}
       </div>
     `;
     selectedCandidateDisplay.style.display = 'flex';
   } else {
     selectedCandidateDisplay.innerHTML = `
-      <div class="candidate-thumb-placeholder">?</div>
+      <div class="candidate-thumb-placeholder" style="background-color: #EBF3F8; border-color: var(--bruno-blue); color: var(--bruno-blue);">+</div>
       <div class="candidate-info-text">
-        <div class="candidate-selected-name" style="color: var(--gray-600);">Nenhum candidato selecionado</div>
-        <div class="candidate-selected-party">Você pode escolher um candidato ou avançar sem preencher.</div>
+        <div class="candidate-selected-name" style="color: var(--bruno-blue);">Toque aqui para escolher</div>
+        <div class="candidate-selected-party">Selecione da lista ou busque por nome/número.</div>
       </div>
     `;
     selectedCandidateDisplay.style.display = 'flex';
   }
 
-  // Renderizar Botões de Ação
+  // Renderizar Ações (Sem botões redundantes)
   officeActions.innerHTML = '';
   if (isBruno) {
-    // Deputado Estadual Bruno Ortiz é BLOQUEADO e inalterável
     const lockedMsg = document.createElement('div');
     lockedMsg.className = 'locked-badge';
     lockedMsg.style.justifyContent = 'center';
-    lockedMsg.style.padding = '8px';
+    lockedMsg.style.padding = '10px';
     lockedMsg.innerHTML = '🔒 Voto oficial confirmado para Deputado Estadual';
     officeActions.appendChild(lockedMsg);
   } else {
     if (selectedVote) {
-      const btnChange = document.createElement('button');
-      btnChange.type = 'button';
-      btnChange.className = 'btn-secondary';
-      btnChange.innerHTML = `
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
-        <span>ALTERAR CANDIDATO</span>
-      `;
-      btnChange.onclick = () => openCandidateModal(currentOffice);
-
       const btnRemove = document.createElement('button');
       btnRemove.type = 'button';
       btnRemove.className = 'btn-text-danger';
-      btnRemove.textContent = 'Limpar este cargo';
-      btnRemove.onclick = () => {
+      btnRemove.textContent = 'Deixar este cargo em branco';
+      btnRemove.onclick = (e) => {
+        e.stopPropagation(); // Não abrir modal
         appState.votes[currentOffice.id] = null;
         renderOffice();
       };
-
-      officeActions.appendChild(btnChange);
       officeActions.appendChild(btnRemove);
-    } else {
-      const btnChoose = document.createElement('button');
-      btnChoose.type = 'button';
-      btnChoose.className = 'btn-primary';
-      btnChoose.innerHTML = `
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-        <span>ESCOLHER CANDIDATO</span>
-      `;
-      btnChoose.onclick = () => openCandidateModal(currentOffice);
-      officeActions.appendChild(btnChoose);
     }
   }
 }
@@ -465,7 +449,16 @@ function selectCandidate(candidate) {
   };
 
   closeCandidateModal();
-  renderOffice();
+
+  // EXPERIÊNCIA MOBILE-FIRST REAL:
+  // Ao clicar e escolher o candidato, avança automaticamente para o próximo cargo!
+  if (appState.currentStep < appData.offices.length - 1) {
+    appState.currentStep++;
+    renderOffice();
+  } else {
+    showScreen('reviewScreen');
+    renderReview();
+  }
 }
 
 // ==========================================
