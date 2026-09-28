@@ -37,6 +37,32 @@ let currentSearchLetter = 'TODOS';
 let currentGeneratedBlob = null;
 
 // ==========================================
+// 0. HAPTIC FEEDBACK (VIBRAÇÃO TÁTIL NATIVA)
+// ==========================================
+function triggerHaptic(type = 'light') {
+  try {
+    if ('vibrate' in navigator) {
+      if (type === 'light') navigator.vibrate(10);
+      else if (type === 'medium') navigator.vibrate(20);
+      else if (type === 'success') navigator.vibrate([15, 40, 20]);
+    }
+  } catch (e) {
+    // Silencioso se não suportado
+  }
+}
+
+// Normalizador de busca (remover acentos e caracteres especiais)
+function normalizeText(text) {
+  if (!text) return '';
+  return text
+    .toString()
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .trim();
+}
+
+// ==========================================
 // 1. INICIALIZAÇÃO & PERSISTÊNCIA
 // ==========================================
 async function initApp() {
@@ -157,6 +183,7 @@ function setupEventListeners() {
     btnStart.addEventListener('click', () => {
       const val = voterInput.value.trim();
       if (!val) return;
+      triggerHaptic('success');
       appState.voter.firstName = val;
       appState.currentStep = 0;
       saveState();
@@ -171,6 +198,7 @@ function setupEventListeners() {
 
   if (btnStepBack) {
     btnStepBack.addEventListener('click', () => {
+      triggerHaptic('light');
       if (appState.currentStep > 0) {
         appState.currentStep--;
         renderOffice();
@@ -182,6 +210,7 @@ function setupEventListeners() {
 
   if (btnStepNext) {
     btnStepNext.addEventListener('click', () => {
+      triggerHaptic('light');
       if (appState.currentStep < appData.offices.length - 1) {
         appState.currentStep++;
         renderOffice();
@@ -199,6 +228,7 @@ function setupEventListeners() {
 
   // Botão Gerar Colinha
   document.getElementById('btnGenerateSantinho')?.addEventListener('click', async () => {
+    triggerHaptic('success');
     showScreen('finalScreen');
     await generateSantinho();
   });
@@ -209,7 +239,8 @@ function setupEventListeners() {
     renderReview();
   });
 
-  // Download & Share
+  // Download, WhatsApp & Share
+  document.getElementById('btnWhatsApp')?.addEventListener('click', sendViaWhatsApp);
   document.getElementById('btnDownload')?.addEventListener('click', downloadSantinho);
   document.getElementById('btnShare')?.addEventListener('click', shareSantinho);
 
@@ -397,11 +428,12 @@ function searchCandidates(query) {
   const container = document.getElementById('candidatesList');
   container.innerHTML = '';
 
-  const cleanQuery = query.toLowerCase().trim();
+  const cleanQuery = normalizeText(query);
 
   const filtered = list.filter(cand => {
-    const matchesLetter = currentSearchLetter === 'TODOS' || cand.name.toUpperCase().startsWith(currentSearchLetter);
-    const matchesQuery = !cleanQuery || cand.name.toLowerCase().includes(cleanQuery) || cand.number.includes(cleanQuery);
+    const normName = normalizeText(cand.name);
+    const matchesLetter = currentSearchLetter === 'TODOS' || normName.startsWith(currentSearchLetter.toLowerCase());
+    const matchesQuery = !cleanQuery || normName.includes(cleanQuery) || cand.number.includes(cleanQuery);
     return matchesLetter && matchesQuery;
   });
 
@@ -430,7 +462,10 @@ function searchCandidates(query) {
       </div>
       <div class="candidate-item-number">${cand.number}</div>
     `;
-    item.onclick = () => selectCandidate(cand);
+    item.onclick = () => {
+      triggerHaptic('medium');
+      selectCandidate(cand);
+    };
     container.appendChild(item);
   });
 }
@@ -825,6 +860,27 @@ async function shareSantinho() {
     // Fallback gracioso
     downloadSantinho();
   }
+}
+
+// ==========================================
+// 8.1 DISPARO DIRETO NO WHATSAPP
+// ==========================================
+function sendViaWhatsApp() {
+  triggerHaptic('success');
+  const voterName = (appState.voter.firstName || 'Amigo').trim();
+  const upperName = voterName.toUpperCase();
+  
+  // Montar resumo leve e persuasivo
+  const textMsg = `Olá! Montei minha *Colinha Eleitoral 2026*! 🇧🇷\n\n` +
+    `Meu Deputado Estadual já está confirmado:\n` +
+    `⭐ *BRUNO ORTIZ — 10222*\n` +
+    `_"O troco chegou. Vai dar B.O!"_\n\n` +
+    `Monte a sua também em segundos e leve salva no celular:\n` +
+    `👉 https://colinhabrunoortiz.pages.dev`;
+
+  const encoded = encodeURIComponent(textMsg);
+  const waUrl = `https://api.whatsapp.com/send?text=${encoded}`;
+  window.open(waUrl, '_blank');
 }
 
 // ==========================================
