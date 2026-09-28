@@ -1,0 +1,8 @@
+name = "santinho-brunoortiz-10222"
+compatibility_date = "2024-09-01"
+pages_build_output_dir = "public"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "brunoortiz-visita-d1"
+database_id = "904b63fd-26fb-470c-ada4-f5121a6912d3"

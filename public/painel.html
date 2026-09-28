@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel de Inteligência — Bruno Ortiz 10222</title>
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <link rel="icon" type="image/png" href="assets/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #031e10;
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --card-border: rgba(255, 255, 255, 0.1);
+      --green-primary: #10b981;
+      --green-glow: rgba(16, 185, 129, 0.3);
+      --gold: #f59e0b;
+      --text: #f9fafb;
+      --text-muted: #9ca3af;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 24px 16px 48px;
+    }
+
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    /* Header */
+    .dashboard-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 28px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .title-group h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 26px;
+      font-weight: 850;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .title-group p {
+      color: var(--text-muted);
+      font-size: 14px;
+      margin-top: 4px;
+    }
+
+    .actions-bar {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: none;
+    }
+
+    .btn-excel {
+      background: linear-gradient(135deg, #059669 0%, #047857 100%);
+      color: #ffffff;
+      box-shadow: 0 4px 14px var(--green-glow);
+    }
+    .btn-excel:hover { transform: translateY(-1px); }
+
+    .btn-refresh {
+      background: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+      border: 1px solid var(--card-border);
+    }
+    .btn-refresh:hover { background: rgba(255, 255, 255, 0.15); }
+
+    /* KPI Cards */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .kpi-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 20px;
+      backdrop-filter: blur(12px);
+    }
+
+    .kpi-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .kpi-value {
+      font-family: 'Outfit', sans-serif;
+      font-size: 36px;
+      font-weight: 850;
+      color: #ffffff;
+      margin: 8px 0 4px;
+    }
+
+    .kpi-sub {
+      font-size: 12px;
+      color: var(--green-primary);
+    }
+
+    /* Grids de Rankings */
+    .rankings-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      margin-bottom: 28px;
+    }
+
+    .panel-box {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 22px;
+      backdrop-filter: blur(12px);
+    }
+
+    .panel-box h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 17px;
+      font-weight: 750;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #ffffff;
+    }
+
+    .ranking-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .ranking-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .ranking-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13.5px;
+      font-weight: 600;
+    }
+
+    .ranking-name { color: #ffffff; }
+    .ranking-votes { color: var(--gold); font-weight: 800; }
+
+    .progress-bar-bg {
+      width: 100%;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #10b981 0%, #34d399 100%);
+      border-radius: 999px;
+      transition: width 0.4s ease;
+    }
+
+    /* Tabela de Últimas Colinhas */
+    .table-responsive {
+      overflow-x: auto;
+      margin-top: 12px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 13px;
+    }
+
+    th {
+      padding: 12px 14px;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--card-border);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    td {
+      padding: 12px 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      color: #e5e7eb;
+    }
+
+    .badge-eleitor {
+      background: rgba(16, 185, 129, 0.2);
+      color: #34d399;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 12px;
+    }
+
+    .badge-acao {
+      background: rgba(245, 158, 11, 0.15);
+      color: #fbbf24;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    /* Tela de Login */
+    #auth-screen {
+      max-width: 380px;
+      margin: 100px auto 0;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 32px 24px;
+      text-align: center;
+      backdrop-filter: blur(14px);
+    }
+
+    .auth-input {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: rgba(0, 0, 0, 0.3);
+      border: 1.5px solid var(--card-border);
+      color: #ffffff;
+      font-size: 15px;
+      margin: 18px 0 14px;
+      outline: none;
+    }
+    .auth-input:focus { border-color: var(--green-primary); }
+
+    .auth-btn {
+      width: 100%;
+      padding: 14px;
+      border-radius: 12px;
+      background: var(--green-primary);
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 15px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Tela de Acesso Protegido -->
+  <div id="auth-screen">
+    <div style="font-size: 40px; margin-bottom: 12px;">🔒</div>
+    <h2 style="font-family: 'Outfit'; font-weight: 800; color: #ffffff;">Inteligência Eleitoral 2026</h2>
+    <p style="color: var(--text-muted); font-size: 13px; margin-top: 6px;">Digite a senha de acesso para visualizar os relatórios e exportar dados.</p>
+    <form id="form-auth">
+      <input type="password" id="input-token" class="auth-input" placeholder="Senha de acesso..." required autofocus>
+      <button type="submit" class="auth-btn">Entrar no Painel</button>
+    </form>
+    <div id="auth-error" style="color: #ef4444; font-size: 12px; margin-top: 10px; display: none;">Senha incorreta. Tente novamente.</div>
+  </div>
+
+  <!-- Dashboard Principal -->
+  <div id="dashboard-content" class="container" style="display: none;">
+    
+    <header class="dashboard-header">
+      <div class="title-group">
+        <h1>📊 Painel de Inteligência — Bruno Ortiz 10222</h1>
+        <p>Acompanhamento em tempo real de votos, dobradinhas e engajamento da colinha oficial.</p>
+      </div>
+      <div class="actions-bar">
+        <button class="btn btn-refresh" id="btn-atualizar">🔄 Atualizar</button>
+        <a href="#" class="btn btn-excel" id="btn-export-csv" target="_blank">📥 Exportar para Excel (CSV)</a>
+      </div>
+    </header>
+
+    <!-- Indicadores Principais (KPIs) -->
+    <section class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-label">Total de Colinhas</div>
+        <div class="kpi-value" id="kpi-total">0</div>
+        <div class="kpi-sub">Montadas no sistema</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Eleitores com Nome</div>
+        <div class="kpi-value" id="kpi-identificados" style="color: #34d399;">0</div>
+        <div class="kpi-sub">Personalizaram com nome</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Fotos Baixadas</div>
+        <div class="kpi-value" id="kpi-salvas" style="color: #60a5fa;">0</div>
+        <div class="kpi-sub">Salvas para levar à urna</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Compartilhadas</div>
+        <div class="kpi-value" id="kpi-zap" style="color: #22c55e;">0</div>
+        <div class="kpi-sub">Enviadas no WhatsApp</div>
+      </div>
+    </section>
+
+    <!-- Dobradinhas e Rankings -->
+    <section class="rankings-grid">
+      <!-- Deputados Federais Mais Votados com Bruno Ortiz -->
+      <div class="panel-box">
+        <h3>🏛️ Dobradinhas: Deputados Federais</h3>
+        <div class="ranking-list" id="rank-dep-est">
+          <div style="color: var(--text-muted); font-size: 13px;">Carregando dados...</div>
+        </div>
+      </div>
+
+      <!-- Senadores Mais Votados -->
+      <div class="panel-box">
+        <h3>⭐ Senadores Mais Escolhidos</h3>
+        <div class="ranking-list" id="rank-senadores">
+          <div style="color: var(--text-muted); font-size: 13px;">Carregando dados...</div>
+        </div>
+      </div>
+
+      <!-- Governador -->
+      <div class="panel-box">
+        <h3>👔 Voto para Governador</h3>
+        <div class="ranking-list" id="rank-gov">
+          <div style="color: var(--text-muted); font-size: 13px;">Carregando dados...</div>
+        </div>
+      </div>
+
+      <!-- Presidente -->
+      <div class="panel-box">
+        <h3>🇧🇷 Voto para Presidente</h3>
+        <div class="ranking-list" id="rank-pres">
+          <div style="color: var(--text-muted); font-size: 13px;">Carregando dados...</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tabela com Últimas Colinhas Montadas -->
+    <section class="panel-box" style="margin-bottom: 24px;">
+      <h3>📋 Últimas Colinhas Registradas (Tempo Real)</h3>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Data/Hora</th>
+              <th>Eleitor</th>
+              <th>Dep. Estadual</th>
+              <th>Senadores</th>
+              <th>Governador</th>
+              <th>Presidente</th>
+              <th>Ação</th>
+              <th>Dispositivo</th>
+            </tr>
+          </thead>
+          <tbody id="tbody-ultimas">
+            <tr>
+              <td colspan="8" style="text-align: center; color: var(--text-muted); padding: 24px;">Nenhuma colinha registrada ainda.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="painel.js?v=50"></script>
+</body>
+</html>
