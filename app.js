@@ -333,16 +333,16 @@ function renderOffice() {
       <div class="candidate-info-text">
         <div class="candidate-selected-name">${selectedVote.name}</div>
         <div class="candidate-selected-party">${selectedVote.party || ''} • Nº ${selectedVote.number}</div>
-        ${isBruno ? `<div class="locked-badge">🔒 Seu voto já está aqui!</div>` : '<div style="font-size: 0.8rem; color: var(--bruno-blue); font-weight: 600; margin-top: 4px;">Toque no cartão para alterar</div>'}
+        ${isBruno ? `<div class="locked-badge">🔒 Voto fechado com Bruno Ortiz!</div>` : '<div style="font-size: 0.85rem; color: var(--bruno-blue); font-weight: 700; margin-top: 4px;">👉 Toque aqui se quiser mudar</div>'}
       </div>
     `;
     selectedCandidateDisplay.style.display = 'flex';
   } else {
     selectedCandidateDisplay.innerHTML = `
-      <div class="candidate-thumb-placeholder" style="background-color: #EBF3F8; border-color: var(--bruno-blue); color: var(--bruno-blue);">+</div>
+      <div class="candidate-thumb-placeholder" style="background-color: #E8F2FA; border-color: var(--bruno-blue); color: var(--bruno-blue); font-weight: 900;">+</div>
       <div class="candidate-info-text">
-        <div class="candidate-selected-name" style="color: var(--bruno-blue);">Toque aqui para escolher</div>
-        <div class="candidate-selected-party">Selecione da lista ou busque por nome/número.</div>
+        <div class="candidate-selected-name" style="color: var(--bruno-blue); font-size: 1.15rem; font-weight: 800;">👉 Clique aqui e escolha o seu!</div>
+        <div class="candidate-selected-party" style="font-size: 0.88rem; color: var(--gray-700); font-weight: 600;">Aperte pra achar pelo nome ou número da urna</div>
       </div>
     `;
     selectedCandidateDisplay.style.display = 'flex';
@@ -355,14 +355,14 @@ function renderOffice() {
     lockedMsg.className = 'locked-badge';
     lockedMsg.style.justifyContent = 'center';
     lockedMsg.style.padding = '10px';
-    lockedMsg.innerHTML = '🔒 Voto oficial confirmado para Deputado Estadual';
+    lockedMsg.innerHTML = '🔒 Voto confirmado pra Deputado Estadual: Bruno Ortiz 10222!';
     officeActions.appendChild(lockedMsg);
   } else {
     if (selectedVote) {
       const btnRemove = document.createElement('button');
       btnRemove.type = 'button';
       btnRemove.className = 'btn-text-danger';
-      btnRemove.textContent = 'Deixar este cargo em branco';
+      btnRemove.textContent = '✕ Deixar este cargo em branco';
       btnRemove.onclick = (e) => {
         e.stopPropagation(); // Não abrir modal
         appState.votes[currentOffice.id] = null;

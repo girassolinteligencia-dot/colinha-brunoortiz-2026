@@ -5,7 +5,7 @@
       "title": "DEPUTADO FEDERAL",
       "digits": 4,
       "order": 1,
-      "description": "Escolha seu Deputado Federal (4 dígitos)"
+      "description": "Quem vai te representar em Brasília? (4 números)"
     },
     {
       "id": "deputadoEstadual",
@@ -13,35 +13,35 @@
       "digits": 5,
       "order": 2,
       "locked": true,
-      "description": "Seu Deputado Estadual oficial (5 dígitos)"
+      "description": "Seu deputado estadual da mudança no MS (5 números)"
     },
     {
       "id": "senador1",
       "title": "SENADOR 1",
       "digits": 3,
       "order": 3,
-      "description": "Escolha sua 1ª vaga ao Senado (3 dígitos)"
+      "description": "Escolha seu 1º senador (3 números)"
     },
     {
       "id": "senador2",
       "title": "SENADOR 2",
       "digits": 3,
       "order": 4,
-      "description": "Escolha sua 2ª vaga ao Senado (3 dígitos)"
+      "description": "Escolha seu 2º senador (3 números)"
     },
     {
       "id": "governador",
       "title": "GOVERNADOR",
       "digits": 2,
       "order": 5,
-      "description": "Escolha o Governador do Estado (2 dígitos)"
+      "description": "Quem governa o nosso Estado? (2 números)"
     },
     {
       "id": "presidente",
       "title": "PRESIDENTE",
       "digits": 2,
       "order": 6,
-      "description": "Escolha o Presidente da República (2 dígitos)"
+      "description": "Quem vai comandar o Brasil? (2 números)"
     }
   ],
   "candidates": {
