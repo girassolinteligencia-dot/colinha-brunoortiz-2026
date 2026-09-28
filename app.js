@@ -671,15 +671,28 @@ async function generateSantinho() {
     ctx.textAlign = 'left';
     ctx.textBaseline = 'top';
     if (isBruno) {
-      ctx.font = '900 19px -apple-system, BlinkMacSystemFont, sans-serif';
+      ctx.font = '900 18px "Montserrat", -apple-system, BlinkMacSystemFont, sans-serif';
       ctx.fillStyle = '#006CB5';
       ctx.fillText('BRUNO ORTIZ', startBoxX, currentY);
     } else if (vote && vote.name) {
-      ctx.font = 'bold 15px -apple-system, BlinkMacSystemFont, sans-serif';
-      ctx.fillStyle = '#334155';
-      ctx.fillText(vote.name.toUpperCase(), startBoxX, currentY);
+      const candNameUpper = vote.name.toUpperCase();
+      // Ajustar dinamicamente o tamanho da fonte se o nome de urna for extenso
+      const fontSize = candNameUpper.length > 22 ? 13 : 15;
+      ctx.font = `bold ${fontSize}px "Inter", -apple-system, BlinkMacSystemFont, sans-serif`;
+      ctx.fillStyle = '#1E293B';
+      
+      // Limitar largura máxima para preservar margem da foto grande à direita
+      const maxNameWidth = width * 0.48;
+      let displayName = candNameUpper;
+      if (ctx.measureText(displayName).width > maxNameWidth) {
+        while (ctx.measureText(displayName + '...').width > maxNameWidth && displayName.length > 0) {
+          displayName = displayName.slice(0, -1);
+        }
+        displayName += '...';
+      }
+      ctx.fillText(displayName, startBoxX, currentY);
     } else {
-      ctx.font = 'italic 13px -apple-system, BlinkMacSystemFont, sans-serif';
+      ctx.font = 'italic 13px "Inter", -apple-system, BlinkMacSystemFont, sans-serif';
       ctx.fillStyle = '#94A3B8';
       ctx.fillText('—', startBoxX + 4, currentY);
     }
