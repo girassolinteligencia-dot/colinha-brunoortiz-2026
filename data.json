@@ -1,0 +1,216 @@
+{
+  "offices": [
+    {
+      "id": "deputadoFederal",
+      "title": "DEPUTADO FEDERAL",
+      "digits": 4,
+      "order": 1,
+      "description": "Escolha seu Deputado Federal (4 dígitos)"
+    },
+    {
+      "id": "deputadoEstadual",
+      "title": "DEPUTADO ESTADUAL",
+      "digits": 5,
+      "order": 2,
+      "locked": true,
+      "description": "Seu Deputado Estadual oficial (5 dígitos)"
+    },
+    {
+      "id": "senador1",
+      "title": "SENADOR 1",
+      "digits": 3,
+      "order": 3,
+      "description": "Escolha sua 1ª vaga ao Senado (3 dígitos)"
+    },
+    {
+      "id": "senador2",
+      "title": "SENADOR 2",
+      "digits": 3,
+      "order": 4,
+      "description": "Escolha sua 2ª vaga ao Senado (3 dígitos)"
+    },
+    {
+      "id": "governador",
+      "title": "GOVERNADOR",
+      "digits": 2,
+      "order": 5,
+      "description": "Escolha o Governador do Estado (2 dígitos)"
+    },
+    {
+      "id": "presidente",
+      "title": "PRESIDENTE",
+      "digits": 2,
+      "order": 6,
+      "description": "Escolha o Presidente da República (2 dígitos)"
+    }
+  ],
+  "candidates": {
+    "deputadoEstadual": [
+      {
+        "id": "bruno-ortiz-10222",
+        "name": "Bruno Ortiz",
+        "ballotName": "BRUNO ORTIZ",
+        "number": "10222",
+        "office": "deputadoEstadual",
+        "party": "REPUBLICANOS",
+        "photo": "assets/bruno-ortiz.png",
+        "locked": true,
+        "badge": "Voto Oficial 10222"
+      }
+    ],
+    "deputadoFederal": [
+      {
+        "id": "mock-df-01",
+        "name": "Candidato Exemplo 01",
+        "ballotName": "CANDIDATO EXEMPLO 01",
+        "number": "1010",
+        "party": "PARTIDO EXEMPLO (MOCK)",
+        "photo": "",
+        "locked": false
+      },
+      {
+        "id": "mock-df-02",
+        "name": "Candidato Exemplo 02",
+        "ballotName": "CANDIDATO EXEMPLO 02",
+        "number": "1520",
+        "party": "PARTIDO EXEMPLO (MOCK)",
+        "photo": "",
+        "locked": false
+      },
+      {
+        "id": "mock-df-03",
+        "name": "Candidata Exemplo 03",
+        "ballotName": "CANDIDATA EXEMPLO 03",
+        "number": "2233",
+        "party": "PARTIDO EXEMPLO (MOCK)",
+        "photo": "",
+        "locked": false
+      },
+      {
+        "id": "mock-df-04",
+        "name": "Candidato Exemplo 04",
+        "ballotName": "CANDIDATO EXEMPLO 04",
+        "number": "4567",
+        "party": "PARTIDO EXEMPLO (MOCK)",
+        "photo": "",
+        "locked": false
+      }
+    ],
+    "senador1": [
+      {
+        "id": "mock-sen1-01",
+        "name": "Candidato Exemplo Senado A",
+        "ballotName": "CANDIDATO SENADO A",
+        "number": "101",
+        "party": "PARTIDO EXEMPLO (MOCK)",
+        "photo": "",
+        "locked": false
+      },
+      {
+        "id": "mock-sen1-02",
+        "name": "Candidata Exemplo Senado B",
+        "ballotName": "CANDIDATA SENADO B",
+        "number": "151",
+        "party": "PARTIDO EXEMPLO (MOCK)",
+        "photo": "",
+        "locked": false
+      },
+      {
+        "id": "mock-sen1-03",
+        "name": "Candidato Exemplo Senado C",
+        "ballotName": "CANDIDATO SENADO C",
+        "number": "222",
+        "party": "PARTIDO EXEMPLO (MOCK)",
+        "photo": "",
+        "locked": false
+      }
+    ],
+    "senador2": [
+      {
+        "id": "mock-sen2-01",
+        "name": "Candidato Exemplo Senado D",
+        "ballotName": "CANDIDATO SENADO D",
+        "number": "202",
+        "party": "PARTIDO EXEMPLO (MOCK)",
+        "photo": "",
+        "locked": false
+      },
+      {
+        "id": "mock-sen2-02",
+        "name": "Candidata Exemplo Senado E",
+        "ballotName": "CANDIDATA SENADO E",
+        "number": "455",
+        "party": "PARTIDO EXEMPLO (MOCK)",
+        "photo": "",
+        "locked": false
+      },
+      {
+        "id": "mock-sen2-03",
+        "name": "Candidato Exemplo Senado F",
+        "ballotName": "CANDIDATO SENADO F",
+        "number": "777",
+        "party": "PARTIDO EXEMPLO (MOCK)",
+        "photo": "",
+        "locked": false
+      }
+    ],
+    "governador": [
+      {
+        "id": "mock-gov-01",
+        "name": "Candidato Exemplo Governador A",
+        "ballotName": "GOVERNADOR EXEMPLO A",
+        "number": "10",
+        "party": "PARTIDO EXEMPLO (MOCK)",
+        "photo": "",
+        "locked": false
+      },
+      {
+        "id": "mock-gov-02",
+        "name": "Candidata Exemplo Governadora B",
+        "ballotName": "GOVERNADORA EXEMPLO B",
+        "number": "15",
+        "party": "PARTIDO EXEMPLO (MOCK)",
+        "photo": "",
+        "locked": false
+      },
+      {
+        "id": "mock-gov-03",
+        "name": "Candidato Exemplo Governador C",
+        "ballotName": "GOVERNADOR EXEMPLO C",
+        "number": "22",
+        "party": "PARTIDO EXEMPLO (MOCK)",
+        "photo": "",
+        "locked": false
+      }
+    ],
+    "presidente": [
+      {
+        "id": "mock-pres-01",
+        "name": "Candidato Exemplo Presidente A",
+        "ballotName": "PRESIDENTE EXEMPLO A",
+        "number": "10",
+        "party": "PARTIDO EXEMPLO (MOCK)",
+        "photo": "",
+        "locked": false
+      },
+      {
+        "id": "mock-pres-02",
+        "name": "Candidata Exemplo Presidente B",
+        "ballotName": "PRESIDENTE EXEMPLO B",
+        "number": "15",
+        "party": "PARTIDO EXEMPLO (MOCK)",
+        "photo": "",
+        "locked": false
+      },
+      {
+        "id": "mock-pres-03",
+        "name": "Candidato Exemplo Presidente C",
+        "ballotName": "PRESIDENTE EXEMPLO C",
+        "number": "22",
+        "party": "PARTIDO EXEMPLO (MOCK)",
+        "photo": "",
+        "locked": false
+      }
+    ]
+  }
+}
