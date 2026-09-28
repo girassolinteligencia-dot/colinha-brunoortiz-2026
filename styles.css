@@ -38,15 +38,21 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: var(--font-family);
   background-color: #E8F2FA;
   color: var(--gray-800);
   line-height: 1.4;
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: stretch;
+  overflow-x: hidden;
 }
 
 /* Container que simula e restringe tela de app móvel */
@@ -54,12 +60,14 @@ body {
   width: 100%;
   max-width: 440px;
   min-height: 100vh;
+  min-height: 100dvh;
   background-color: var(--white);
   box-shadow: 0 0 40px rgba(0, 108, 181, 0.16);
   display: flex;
   flex-direction: column;
   position: relative;
   overflow-x: hidden;
+  margin: 0 auto;
 }
 
 /* Telas */
@@ -67,7 +75,6 @@ body {
   display: none;
   flex: 1;
   flex-direction: column;
-  padding-bottom: calc(20px + var(--safe-bottom));
   animation: fadeIn 0.25s ease-out;
 }
 
@@ -577,18 +584,20 @@ body {
 ========================================= */
 .stepper-content {
   padding: 16px;
+  padding-bottom: calc(20px + var(--safe-bottom));
   flex: 1;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 }
 
 .office-card {
   background-color: var(--white);
   border: 2px solid var(--gray-200);
   border-radius: var(--radius-lg);
-  padding: 20px;
+  padding: 20px 16px;
   box-shadow: var(--shadow-sm);
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -618,7 +627,7 @@ body {
 }
 
 .office-header {
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   text-align: center;
 }
 
@@ -641,20 +650,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   margin: 16px 0;
 }
 
 .digit-box {
-  width: 48px;
-  height: 60px;
+  width: 52px;
+  height: 64px;
   border: 2px solid var(--bruno-green);
   border-radius: var(--radius-md);
   background-color: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.9rem;
+  font-size: 2rem;
   font-weight: 900;
   color: var(--bruno-blue);
   font-family: var(--font-heading);
@@ -678,10 +687,11 @@ body {
   display: flex;
   align-items: center;
   gap: 14px;
-  padding: 12px;
+  padding: 14px;
   background-color: var(--gray-50);
   border-radius: var(--radius-md);
   margin-top: 10px;
+  border: 1px solid var(--gray-200);
 }
 
 .candidate-thumb {
@@ -691,37 +701,41 @@ body {
   object-fit: cover;
   border: 2px solid var(--bruno-blue);
   background-color: var(--white);
+  flex-shrink: 0;
 }
 
 .candidate-thumb-placeholder {
   width: 64px;
   height: 64px;
   border-radius: var(--radius-md);
-  background-color: var(--gray-200);
+  background-color: #E8F2FA;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--gray-600);
-  font-size: 1.6rem;
-  border: 2px dashed var(--gray-300);
+  color: var(--bruno-blue);
+  font-size: 1.8rem;
+  font-weight: 900;
+  border: 2px dashed var(--bruno-blue);
+  flex-shrink: 0;
 }
 
 .candidate-info-text {
   flex: 1;
+  text-align: left;
 }
 
 .candidate-selected-name {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: 800;
   color: var(--gray-900);
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 .candidate-selected-party {
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--gray-600);
-  margin-top: 2px;
+  margin-top: 3px;
 }
 
 .locked-badge {
@@ -732,7 +746,7 @@ body {
   font-weight: 700;
   color: #005088;
   background-color: #E1F0FA;
-  padding: 3px 8px;
+  padding: 4px 10px;
   border-radius: var(--radius-full);
   margin-top: 6px;
 }
@@ -741,8 +755,9 @@ body {
 .office-actions {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
-  margin-top: 16px;
+  margin-top: 14px;
 }
 
 .btn-secondary {
@@ -777,29 +792,44 @@ body {
   text-align: center;
 }
 
-/* Barra de Navegação Inferior */
+/* Barra de Navegação Inferior - Centralizada e Perfeita para Mobile */
 .stepper-nav {
   margin-top: auto;
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 12px;
-  padding: 12px 0 0;
+  width: 100%;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 16px 0 6px;
 }
 
 .btn-nav-back {
   flex: 1;
-  min-height: 52px;
+  min-height: 54px;
   background-color: var(--gray-100);
-  border: 1px solid var(--gray-300);
+  border: 1.5px solid var(--gray-300);
   color: var(--gray-800);
   border-radius: var(--radius-md);
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 0.95rem;
+  font-weight: 800;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.btn-nav-back:active {
+  background-color: var(--gray-200);
+  transform: scale(0.98);
 }
 
 .btn-nav-next {
-  flex: 2;
-  min-height: 52px;
+  flex: 1.5;
+  min-height: 54px;
   background-color: var(--bruno-blue);
   color: var(--white);
   border: none;
@@ -811,11 +841,13 @@ body {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  box-shadow: 0 4px 12px rgba(0, 108, 181, 0.3);
+  box-shadow: 0 4px 14px rgba(0, 108, 181, 0.35);
+  transition: all 0.15s ease;
 }
 
 .btn-nav-next:active {
   background-color: var(--bruno-blue-dark);
+  transform: scale(0.98);
 }
 
 /* =========================================
@@ -1011,6 +1043,7 @@ body {
 ========================================= */
 .review-content {
   padding: 16px;
+  padding-bottom: calc(20px + var(--safe-bottom));
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -1119,6 +1152,7 @@ body {
 ========================================= */
 .final-content {
   padding: 16px;
+  padding-bottom: calc(24px + var(--safe-bottom));
   flex: 1;
   display: flex;
   flex-direction: column;

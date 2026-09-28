@@ -199,8 +199,14 @@ function setupEventListeners() {
   if (btnStepBack) {
     btnStepBack.addEventListener('click', () => {
       triggerHaptic('light');
-      if (appState.currentStep > 0) {
-        appState.currentStep--;
+      let prevIndex = appState.currentStep - 1;
+      // Pular cargos fixos/bloqueados (como Bruno Ortiz 10222 já garantido)
+      while (prevIndex >= 0 && appData.offices[prevIndex]?.locked) {
+        prevIndex--;
+      }
+
+      if (prevIndex >= 0) {
+        appState.currentStep = prevIndex;
         renderOffice();
       } else {
         showScreen('welcomeScreen');
@@ -211,8 +217,14 @@ function setupEventListeners() {
   if (btnStepNext) {
     btnStepNext.addEventListener('click', () => {
       triggerHaptic('light');
-      if (appState.currentStep < appData.offices.length - 1) {
-        appState.currentStep++;
+      let nextIndex = appState.currentStep + 1;
+      // Pular cargos fixos/bloqueados (como Bruno Ortiz 10222 já garantido)
+      while (nextIndex < appData.offices.length && appData.offices[nextIndex]?.locked) {
+        nextIndex++;
+      }
+
+      if (nextIndex < appData.offices.length) {
+        appState.currentStep = nextIndex;
         renderOffice();
       } else {
         showScreen('reviewScreen');
@@ -267,9 +279,11 @@ function renderOffice() {
 
   saveState();
 
-  // Atualizar Barra de Progresso
-  const stepNumber = appState.currentStep + 1;
-  const totalSteps = appData.offices.length;
+  // Atualizar Barra de Progresso (Considerando apenas cargos que o eleitor preenche)
+  const selectableOffices = appData.offices.filter(o => !o.locked);
+  const currentSelectableIndex = selectableOffices.findIndex(o => o.id === currentOffice.id);
+  const stepNumber = currentSelectableIndex !== -1 ? currentSelectableIndex + 1 : 1;
+  const totalSteps = selectableOffices.length;
   const pct = Math.round((stepNumber / totalSteps) * 100);
 
   document.getElementById('progressStepText').textContent = `Cargo ${stepNumber} de ${totalSteps}`;
@@ -486,9 +500,14 @@ function selectCandidate(candidate) {
   closeCandidateModal();
 
   // EXPERIÊNCIA MOBILE-FIRST REAL:
-  // Ao clicar e escolher o candidato, avança automaticamente para o próximo cargo!
-  if (appState.currentStep < appData.offices.length - 1) {
-    appState.currentStep++;
+  // Ao clicar e escolher o candidato, avança automaticamente para o próximo cargo elegível!
+  let nextIndex = appState.currentStep + 1;
+  while (nextIndex < appData.offices.length && appData.offices[nextIndex]?.locked) {
+    nextIndex++;
+  }
+
+  if (nextIndex < appData.offices.length) {
+    appState.currentStep = nextIndex;
     renderOffice();
   } else {
     showScreen('reviewScreen');
