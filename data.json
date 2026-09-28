@@ -60,155 +60,1478 @@
     ],
     "deputadoFederal": [
       {
-        "id": "mock-df-01",
-        "name": "Candidato Exemplo 01",
-        "ballotName": "CANDIDATO EXEMPLO 01",
+        "id": "tse-120002549685",
+        "name": "Adauto Souto",
+        "ballotName": "ADAUTO SOUTO",
+        "number": "1267",
+        "party": "PDT",
+        "photo": "assets/fotos_tse/120002549685.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002552173",
+        "name": "Adriano Lima",
+        "ballotName": "ADRIANO LIMA",
+        "number": "2555",
+        "party": "PRD",
+        "photo": "assets/fotos_tse/120002552173.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002549690",
+        "name": "Ailton Figueiredo",
+        "ballotName": "AILTON FIGUEIREDO",
+        "number": "1222",
+        "party": "PDT",
+        "photo": "assets/fotos_tse/120002549690.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002538787",
+        "name": "Alan Guedes",
+        "ballotName": "ALAN GUEDES",
+        "number": "1155",
+        "party": "PP",
+        "photo": "assets/fotos_tse/120002538787.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002537460",
+        "name": "Ana Saravy",
+        "ballotName": "ANA SARAVY",
+        "number": "4300",
+        "party": "PV",
+        "photo": "assets/fotos_tse/120002537460.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002536280",
+        "name": "Andréé Campos",
+        "ballotName": "ANDRÉÉ CAMPOS",
+        "number": "2210",
+        "party": "PL",
+        "photo": "assets/fotos_tse/120002536280.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002536284",
+        "name": "Angelo Marcon",
+        "ballotName": "ANGELO MARCON",
+        "number": "2220",
+        "party": "PL",
+        "photo": "assets/fotos_tse/120002536284.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002538947",
+        "name": "Ariane Tavares",
+        "ballotName": "ARIANE TAVARES",
+        "number": "1555",
+        "party": "MDB",
+        "photo": "assets/fotos_tse/120002538947.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002537355",
+        "name": "Beto Pereira",
+        "ballotName": "BETO PEREIRA",
         "number": "1010",
-        "party": "PARTIDO EXEMPLO (MOCK)",
-        "photo": "",
+        "party": "REPUBLICANOS",
+        "photo": "assets/fotos_tse/120002537355.webp",
         "locked": false
       },
       {
-        "id": "mock-df-02",
-        "name": "Candidato Exemplo 02",
-        "ballotName": "CANDIDATO EXEMPLO 02",
-        "number": "1520",
-        "party": "PARTIDO EXEMPLO (MOCK)",
-        "photo": "",
+        "id": "tse-120002535260",
+        "name": "Bia Cavassa",
+        "ballotName": "BIA CAVASSA",
+        "number": "4500",
+        "party": "PSDB",
+        "photo": "assets/fotos_tse/120002535260.webp",
         "locked": false
       },
       {
-        "id": "mock-df-03",
-        "name": "Candidata Exemplo 03",
-        "ballotName": "CANDIDATA EXEMPLO 03",
+        "id": "tse-120002549684",
+        "name": "Bruna Riquelme",
+        "ballotName": "BRUNA RIQUELME",
+        "number": "1221",
+        "party": "PDT",
+        "photo": "assets/fotos_tse/120002549684.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002532717",
+        "name": "Cabral",
+        "ballotName": "CABRAL",
+        "number": "5080",
+        "party": "PSOL",
+        "photo": "assets/fotos_tse/120002532717.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002537465",
+        "name": "Camila Jara",
+        "ballotName": "CAMILA JARA",
+        "number": "1367",
+        "party": "PT",
+        "photo": "assets/fotos_tse/120002537465.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002535257",
+        "name": "Capitão Roledo",
+        "ballotName": "CAPITÃO ROLEDO",
+        "number": "4522",
+        "party": "PSDB",
+        "photo": "assets/fotos_tse/120002535257.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002538790",
+        "name": "Carlos Bernardo",
+        "ballotName": "CARLOS BERNARDO",
+        "number": "4455",
+        "party": "UNIÃO",
+        "photo": "assets/fotos_tse/120002538790.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002534960",
+        "name": "Carol Ajala",
+        "ballotName": "CAROL AJALA",
+        "number": "3677",
+        "party": "AGIR",
+        "photo": "assets/fotos_tse/120002534960.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002545236",
+        "name": "Carol Mourão",
+        "ballotName": "CAROL MOURÃO",
+        "number": "3033",
+        "party": "NOVO",
+        "photo": "assets/fotos_tse/120002545236.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002536283",
+        "name": "Cassy Monteiro",
+        "ballotName": "CASSY MONTEIRO",
+        "number": "2267",
+        "party": "PL",
+        "photo": "assets/fotos_tse/120002536283.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002552174",
+        "name": "Cesar Alves",
+        "ballotName": "CESAR ALVES",
+        "number": "2550",
+        "party": "PRD",
+        "photo": "assets/fotos_tse/120002552174.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002545242",
+        "name": "Charles Gama",
+        "ballotName": "CHARLES GAMA",
+        "number": "3067",
+        "party": "NOVO",
+        "photo": "assets/fotos_tse/120002545242.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002550718",
+        "name": "Chico Sá",
+        "ballotName": "CHICO SÁ",
+        "number": "7011",
+        "party": "AVANTE",
+        "photo": "assets/fotos_tse/120002550718.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002532718",
+        "name": "Claudia Teles",
+        "ballotName": "CLAUDIA TELES",
+        "number": "5000",
+        "party": "PSOL",
+        "photo": "assets/fotos_tse/120002532718.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002534955",
+        "name": "Claudio",
+        "ballotName": "CLAUDIO",
+        "number": "3636",
+        "party": "AGIR",
+        "photo": "assets/fotos_tse/120002534955.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002537357",
+        "name": "Coronel Bittencourt",
+        "ballotName": "CORONEL BITTENCOURT",
+        "number": "1080",
+        "party": "REPUBLICANOS",
+        "photo": "assets/fotos_tse/120002537357.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002538791",
+        "name": "Dagoberto Nogueira",
+        "ballotName": "DAGOBERTO NOGUEIRA",
+        "number": "1111",
+        "party": "PP",
+        "photo": "assets/fotos_tse/120002538791.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002538792",
+        "name": "Delegado Andréé Matsushita",
+        "ballotName": "DELEGADO ANDRÉÉ MATSUSHITA",
+        "number": "1112",
+        "party": "PP",
+        "photo": "assets/fotos_tse/120002538792.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002552952",
+        "name": "Deyvid Pessuti",
+        "ballotName": "DEYVID PESSUTI",
+        "number": "2727",
+        "party": "DC",
+        "photo": "assets/fotos_tse/120002552952.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002538950",
+        "name": "Dharleng Campos",
+        "ballotName": "DHARLENG CAMPOS",
+        "number": "1515",
+        "party": "MDB",
+        "photo": "assets/fotos_tse/120002538950.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002550717",
+        "name": "Domicio Junior",
+        "ballotName": "DOMICIO JUNIOR",
+        "number": "7000",
+        "party": "AVANTE",
+        "photo": "assets/fotos_tse/120002550717.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002538786",
+        "name": "Dr. Luiz Ovando",
+        "ballotName": "DR. LUIZ OVANDO",
+        "number": "1122",
+        "party": "PP",
+        "photo": "assets/fotos_tse/120002538786.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002537358",
+        "name": "Dr. Paulo Veron",
+        "ballotName": "DR. PAULO VERON",
+        "number": "1033",
+        "party": "REPUBLICANOS",
+        "photo": "assets/fotos_tse/120002537358.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002535259",
+        "name": "Dr. Victor Rocha",
+        "ballotName": "DR. VICTOR ROCHA",
+        "number": "4533",
+        "party": "PSDB",
+        "photo": "assets/fotos_tse/120002535259.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002538789",
+        "name": "Dra. Clediane",
+        "ballotName": "DRA. CLEDIANE",
+        "number": "1123",
+        "party": "PP",
+        "photo": "assets/fotos_tse/120002538789.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002534959",
+        "name": "Edna Paixão",
+        "ballotName": "EDNA PAIXÃO",
+        "number": "3688",
+        "party": "AGIR",
+        "photo": "assets/fotos_tse/120002534959.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002552179",
+        "name": "Eleandra Pachuki",
+        "ballotName": "ELEANDRA PACHUKI",
+        "number": "2534",
+        "party": "PRD",
+        "photo": "assets/fotos_tse/120002552179.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002537462",
+        "name": "Elias Ishy",
+        "ballotName": "ELIAS ISHY",
+        "number": "1313",
+        "party": "PT",
+        "photo": "assets/fotos_tse/120002537462.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002537463",
+        "name": "Eliel Kaiowá",
+        "ballotName": "ELIEL KAIOWÁ",
+        "number": "1333",
+        "party": "PT",
+        "photo": "assets/fotos_tse/120002537463.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002532713",
+        "name": "Fábio Rodrigues",
+        "ballotName": "FÁBIO RODRIGUES",
+        "number": "5051",
+        "party": "PSOL",
+        "photo": "assets/fotos_tse/120002532713.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002532711",
+        "name": "Fátima Souza",
+        "ballotName": "FÁTIMA SOUZA",
+        "number": "5050",
+        "party": "PSOL",
+        "photo": "assets/fotos_tse/120002532711.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002549683",
+        "name": "Flávio Nunes",
+        "ballotName": "FLÁVIO NUNES",
+        "number": "1210",
+        "party": "PDT",
+        "photo": "assets/fotos_tse/120002549683.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002550715",
+        "name": "Fran Da Sade",
+        "ballotName": "FRAN DA SADE",
+        "number": "7022",
+        "party": "AVANTE",
+        "photo": "assets/fotos_tse/120002550715.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002538945",
+        "name": "Gabriel Rossi",
+        "ballotName": "GABRIEL ROSSI",
+        "number": "1510",
+        "party": "MDB",
+        "photo": "assets/fotos_tse/120002538945.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002538784",
+        "name": "Geraldo Resende",
+        "ballotName": "GERALDO RESENDE",
+        "number": "4411",
+        "party": "UNIÃO",
+        "photo": "assets/fotos_tse/120002538784.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002544957",
+        "name": "Germano Caires",
+        "ballotName": "GERMANO CAIRES",
+        "number": "1401",
+        "party": "MISSÃO",
+        "photo": "assets/fotos_tse/120002544957.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002536285",
+        "name": "Giroto",
+        "ballotName": "GIROTO",
+        "number": "2255",
+        "party": "PL",
+        "photo": "assets/fotos_tse/120002536285.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002537464",
+        "name": "Giselle Marques",
+        "ballotName": "GISELLE MARQUES",
+        "number": "1300",
+        "party": "PT",
+        "photo": "assets/fotos_tse/120002537464.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002532715",
+        "name": "Gleycielli Nonato Guató",
+        "ballotName": "GLEYCIELLI NONATO GUATÓ",
+        "number": "5088",
+        "party": "PSOL",
+        "photo": "assets/fotos_tse/120002532715.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002537356",
+        "name": "Isa Marcondes",
+        "ballotName": "ISA MARCONDES",
+        "number": "1022",
+        "party": "REPUBLICANOS",
+        "photo": "assets/fotos_tse/120002537356.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002550712",
+        "name": "Ivanise Rotta",
+        "ballotName": "IVANISE ROTTA",
+        "number": "7033",
+        "party": "AVANTE",
+        "photo": "assets/fotos_tse/120002550712.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002537361",
+        "name": "Jaime Verruck",
+        "ballotName": "JAIME VERRUCK",
+        "number": "1011",
+        "party": "REPUBLICANOS",
+        "photo": "assets/fotos_tse/120002537361.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002552177",
+        "name": "Jardelino Bahia",
+        "ballotName": "JARDELINO BAHIA",
+        "number": "2500",
+        "party": "PRD",
+        "photo": "assets/fotos_tse/120002552177.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002549688",
+        "name": "Jeffersom Marecco",
+        "ballotName": "JEFFERSOM MARECCO",
+        "number": "1234",
+        "party": "PDT",
+        "photo": "assets/fotos_tse/120002549688.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002552948",
+        "name": "Juraci Da Aroeira",
+        "ballotName": "JURACI DA AROEIRA",
+        "number": "2722",
+        "party": "DC",
+        "photo": "assets/fotos_tse/120002552948.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002534956",
+        "name": "Jurandir Machado",
+        "ballotName": "JURANDIR MACHADO",
+        "number": "3666",
+        "party": "AGIR",
+        "photo": "assets/fotos_tse/120002534956.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002552178",
+        "name": "Juvenal Ferreira",
+        "ballotName": "JUVENAL FERREIRA",
+        "number": "2511",
+        "party": "PRD",
+        "photo": "assets/fotos_tse/120002552178.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002538785",
+        "name": "Keliana Fernandes",
+        "ballotName": "KELIANA FERNANDES",
+        "number": "1144",
+        "party": "PP",
+        "photo": "assets/fotos_tse/120002538785.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002544960",
+        "name": "Kellyanne Correa",
+        "ballotName": "KELLYANNE CORREA",
+        "number": "1441",
+        "party": "MISSÃO",
+        "photo": "assets/fotos_tse/120002544960.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002532710",
+        "name": "Lahuanny Oliveira",
+        "ballotName": "LAHUANNY OLIVEIRA",
+        "number": "5077",
+        "party": "PSOL",
+        "photo": "assets/fotos_tse/120002532710.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002536287",
+        "name": "Luana Ruiz",
+        "ballotName": "LUANA RUIZ",
         "number": "2233",
-        "party": "PARTIDO EXEMPLO (MOCK)",
-        "photo": "",
+        "party": "PL",
+        "photo": "assets/fotos_tse/120002536287.webp",
         "locked": false
       },
       {
-        "id": "mock-df-04",
-        "name": "Candidato Exemplo 04",
-        "ballotName": "CANDIDATO EXEMPLO 04",
+        "id": "tse-120002544959",
+        "name": "Lucas Vendite",
+        "ballotName": "LUCAS VENDITE",
+        "number": "1467",
+        "party": "MISSÃO",
+        "photo": "assets/fotos_tse/120002544959.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002552176",
+        "name": "Luciana Mendonça",
+        "ballotName": "LUCIANA MENDONÇA",
+        "number": "2577",
+        "party": "PRD",
+        "photo": "assets/fotos_tse/120002552176.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002552946",
+        "name": "Luciane Costadele",
+        "ballotName": "LUCIANE COSTADELE",
+        "number": "2772",
+        "party": "DC",
+        "photo": "assets/fotos_tse/120002552946.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002549691",
+        "name": "Luis Brizola",
+        "ballotName": "LUIS BRIZOLA",
+        "number": "1200",
+        "party": "PDT",
+        "photo": "assets/fotos_tse/120002549691.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002552689",
+        "name": "Luiz Matchua",
+        "ballotName": "LUIZ MATCHUA",
+        "number": "2900",
+        "party": "PCO",
+        "photo": "assets/fotos_tse/120002552689.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002545238",
+        "name": "Luiz Orcirio Figueiró",
+        "ballotName": "LUIZ ORCIRIO FIGUEIRÓ",
+        "number": "3030",
+        "party": "NOVO",
+        "photo": "assets/fotos_tse/120002545238.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002552949",
+        "name": "Luiz Pereira",
+        "ballotName": "LUIZ PEREIRA",
+        "number": "2777",
+        "party": "DC",
+        "photo": "assets/fotos_tse/120002552949.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002532716",
+        "name": "Lya Santos",
+        "ballotName": "LYA SANTOS",
+        "number": "1818",
+        "party": "REDE",
+        "photo": "assets/fotos_tse/120002532716.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002538952",
+        "name": "Manoel Vitório",
+        "ballotName": "MANOEL VITÓRIO",
+        "number": "1507",
+        "party": "MDB",
+        "photo": "assets/fotos_tse/120002538952.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002536286",
+        "name": "Mara Caseiro",
+        "ballotName": "MARA CASEIRO",
+        "number": "2200",
+        "party": "PL",
+        "photo": "assets/fotos_tse/120002536286.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002536282",
+        "name": "Marcos Pollon",
+        "ballotName": "MARCOS POLLON",
+        "number": "2222",
+        "party": "PL",
+        "photo": "assets/fotos_tse/120002536282.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002552947",
+        "name": "Maria Isabela Saldanha",
+        "ballotName": "MARIA ISABELA SALDANHA",
+        "number": "2700",
+        "party": "DC",
+        "photo": "assets/fotos_tse/120002552947.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002537466",
+        "name": "Marquinhos Trad",
+        "ballotName": "MARQUINHOS TRAD",
+        "number": "4333",
+        "party": "PV",
+        "photo": "assets/fotos_tse/120002537466.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002544956",
+        "name": "Mateus Quadros",
+        "ballotName": "MATEUS QUADROS",
+        "number": "1414",
+        "party": "MISSÃO",
+        "photo": "assets/fotos_tse/120002544956.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002552180",
+        "name": "Mauricio Picarelli",
+        "ballotName": "MAURICIO PICARELLI",
+        "number": "2525",
+        "party": "PRD",
+        "photo": "assets/fotos_tse/120002552180.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002544958",
+        "name": "Mavi Cunha",
+        "ballotName": "MAVI CUNHA",
+        "number": "1400",
+        "party": "MISSÃO",
+        "photo": "assets/fotos_tse/120002544958.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002534957",
+        "name": "Milena Fernandes",
+        "ballotName": "MILENA FERNANDES",
+        "number": "3699",
+        "party": "AGIR",
+        "photo": "assets/fotos_tse/120002534957.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002545234",
+        "name": "Miriam Gimenez",
+        "ballotName": "MIRIAM GIMENEZ",
+        "number": "3060",
+        "party": "NOVO",
+        "photo": "assets/fotos_tse/120002545234.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002537360",
+        "name": "Nanah Cordeiro",
+        "ballotName": "NANAH CORDEIRO",
+        "number": "1067",
+        "party": "REPUBLICANOS",
+        "photo": "assets/fotos_tse/120002537360.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002535258",
+        "name": "Natal Gonzaga",
+        "ballotName": "NATAL GONZAGA",
+        "number": "4525",
+        "party": "PSDB",
+        "photo": "assets/fotos_tse/120002535258.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002537362",
+        "name": "Neto Santos",
+        "ballotName": "NETO SANTOS",
+        "number": "1012",
+        "party": "REPUBLICANOS",
+        "photo": "assets/fotos_tse/120002537362.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002538949",
+        "name": "Paulo Massetti",
+        "ballotName": "PAULO MASSETTI",
+        "number": "1500",
+        "party": "MDB",
+        "photo": "assets/fotos_tse/120002538949.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002537359",
+        "name": "Priscila Bombeira",
+        "ballotName": "PRISCILA BOMBEIRA",
+        "number": "1093",
+        "party": "REPUBLICANOS",
+        "photo": "assets/fotos_tse/120002537359.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002534958",
+        "name": "Prof Aguilera Guarani",
+        "ballotName": "PROF AGUILERA GUARANI",
+        "number": "3613",
+        "party": "AGIR",
+        "photo": "assets/fotos_tse/120002534958.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002532712",
+        "name": "Prof. Anisio Guató",
+        "ballotName": "PROF. ANISIO GUATÓ",
+        "number": "5013",
+        "party": "PSOL",
+        "photo": "assets/fotos_tse/120002532712.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002545239",
+        "name": "Prof. Eduardo Ferrufino",
+        "ballotName": "PROF. EDUARDO FERRUFINO",
+        "number": "3001",
+        "party": "NOVO",
+        "photo": "assets/fotos_tse/120002545239.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002535263",
+        "name": "Professor Juari",
+        "ballotName": "PROFESSOR JUARI",
+        "number": "4599",
+        "party": "PSDB",
+        "photo": "assets/fotos_tse/120002535263.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002550716",
+        "name": "Professora Rbia Mara",
+        "ballotName": "PROFESSORA RBIA MARA",
+        "number": "7055",
+        "party": "AVANTE",
+        "photo": "assets/fotos_tse/120002550716.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002535261",
+        "name": "Puka Valdez",
+        "ballotName": "PUKA VALDEZ",
         "number": "4567",
-        "party": "PARTIDO EXEMPLO (MOCK)",
-        "photo": "",
+        "party": "PSDB",
+        "photo": "assets/fotos_tse/120002535261.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002552688",
+        "name": "Ramão Lopes",
+        "ballotName": "RAMÃO LOPES",
+        "number": "2929",
+        "party": "PCO",
+        "photo": "assets/fotos_tse/120002552688.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002552950",
+        "name": "Raphael Cadeirante",
+        "ballotName": "RAPHAEL CADEIRANTE",
+        "number": "2733",
+        "party": "DC",
+        "photo": "assets/fotos_tse/120002552950.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002552181",
+        "name": "Rebeca Costa",
+        "ballotName": "REBECA COSTA",
+        "number": "2522",
+        "party": "PRD",
+        "photo": "assets/fotos_tse/120002552181.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002549686",
+        "name": "Rhauane Faria",
+        "ballotName": "RHAUANE FARIA",
+        "number": "1212",
+        "party": "PDT",
+        "photo": "assets/fotos_tse/120002549686.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002535264",
+        "name": "Ricardinho Fávaro",
+        "ballotName": "RICARDINHO FÁVARO",
+        "number": "4544",
+        "party": "PSDB",
+        "photo": "assets/fotos_tse/120002535264.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002537363",
+        "name": "Roberto Hashioka",
+        "ballotName": "ROBERTO HASHIOKA",
+        "number": "1000",
+        "party": "REPUBLICANOS",
+        "photo": "assets/fotos_tse/120002537363.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002537467",
+        "name": "Roberto Mateus",
+        "ballotName": "ROBERTO MATEUS",
+        "number": "6565",
+        "party": "PCDOB",
+        "photo": "assets/fotos_tse/120002537467.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002536281",
+        "name": "Rodolfo Nogueira",
+        "ballotName": "RODOLFO NOGUEIRA",
+        "number": "2211",
+        "party": "PL",
+        "photo": "assets/fotos_tse/120002536281.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002544961",
+        "name": "Rodrigo Correa",
+        "ballotName": "RODRIGO CORREA",
+        "number": "1444",
+        "party": "MISSÃO",
+        "photo": "assets/fotos_tse/120002544961.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002549689",
+        "name": "Rosane Bach",
+        "ballotName": "ROSANE BACH",
+        "number": "1250",
+        "party": "PDT",
+        "photo": "assets/fotos_tse/120002549689.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002552687",
+        "name": "Rosangela Benites",
+        "ballotName": "ROSANGELA BENITES",
+        "number": "2999",
+        "party": "PCO",
+        "photo": "assets/fotos_tse/120002552687.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002538788",
+        "name": "Rose Modesto",
+        "ballotName": "ROSE MODESTO",
+        "number": "4444",
+        "party": "UNIÃO",
+        "photo": "assets/fotos_tse/120002538788.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002538953",
+        "name": "Rose Pires",
+        "ballotName": "ROSE PIRES",
+        "number": "1533",
+        "party": "MDB",
+        "photo": "assets/fotos_tse/120002538953.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002550711",
+        "name": "Rui Spinola",
+        "ballotName": "RUI SPINOLA",
+        "number": "7070",
+        "party": "AVANTE",
+        "photo": "assets/fotos_tse/120002550711.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002538946",
+        "name": "Sandro Azambuja",
+        "ballotName": "SANDRO AZAMBUJA",
+        "number": "1522",
+        "party": "MDB",
+        "photo": "assets/fotos_tse/120002538946.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002537468",
+        "name": "Sandro Do Vander",
+        "ballotName": "SANDRO DO VANDER",
+        "number": "1331",
+        "party": "PT",
+        "photo": "assets/fotos_tse/120002537468.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002545240",
+        "name": "Sargento Brunão",
+        "ballotName": "SARGENTO BRUNÃO",
+        "number": "3010",
+        "party": "NOVO",
+        "photo": "assets/fotos_tse/120002545240.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002552175",
+        "name": "Sergio Fahed",
+        "ballotName": "SERGIO FAHED",
+        "number": "7711",
+        "party": "SOLIDARIEDADE",
+        "photo": "assets/fotos_tse/120002552175.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002535262",
+        "name": "Sirlene Dos Santos",
+        "ballotName": "SIRLENE DOS SANTOS",
+        "number": "4510",
+        "party": "PSDB",
+        "photo": "assets/fotos_tse/120002535262.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002552953",
+        "name": "Sophia Santana",
+        "ballotName": "SOPHIA SANTANA",
+        "number": "2770",
+        "party": "DC",
+        "photo": "assets/fotos_tse/120002552953.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002550714",
+        "name": "Sub Dr Almada",
+        "ballotName": "SUB DR ALMADA",
+        "number": "7007",
+        "party": "AVANTE",
+        "photo": "assets/fotos_tse/120002550714.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002545237",
+        "name": "Subtenente Mota",
+        "ballotName": "SUBTENENTE MOTA",
+        "number": "3022",
+        "party": "NOVO",
+        "photo": "assets/fotos_tse/120002545237.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002549687",
+        "name": "Tato Souza",
+        "ballotName": "TATO SOUZA",
+        "number": "1213",
+        "party": "PDT",
+        "photo": "assets/fotos_tse/120002549687.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002536288",
+        "name": "Tenente Portela",
+        "ballotName": "TENENTE PORTELA",
+        "number": "2234",
+        "party": "PL",
+        "photo": "assets/fotos_tse/120002536288.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002552951",
+        "name": "Tenete Balejo De Arruda",
+        "ballotName": "TENETE BALEJO DE ARRUDA",
+        "number": "2790",
+        "party": "DC",
+        "photo": "assets/fotos_tse/120002552951.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002537461",
+        "name": "Thalita",
+        "ballotName": "THALITA",
+        "number": "6523",
+        "party": "PCDOB",
+        "photo": "assets/fotos_tse/120002537461.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002550713",
+        "name": "Tuty Tuty",
+        "ballotName": "TUTY TUTY",
+        "number": "7077",
+        "party": "AVANTE",
+        "photo": "assets/fotos_tse/120002550713.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002532714",
+        "name": "Urias Rocha",
+        "ballotName": "URIAS ROCHA",
+        "number": "1800",
+        "party": "REDE",
+        "photo": "assets/fotos_tse/120002532714.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002545235",
+        "name": "Victoria Peixoto",
+        "ballotName": "VICTORIA PEIXOTO",
+        "number": "3000",
+        "party": "NOVO",
+        "photo": "assets/fotos_tse/120002545235.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002538951",
+        "name": "Vitinho",
+        "ballotName": "VITINHO",
+        "number": "1567",
+        "party": "MDB",
+        "photo": "assets/fotos_tse/120002538951.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002535265",
+        "name": "Viviane Luiza",
+        "ballotName": "VIVIANE LUIZA",
+        "number": "4545",
+        "party": "PSDB",
+        "photo": "assets/fotos_tse/120002535265.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002538948",
+        "name": "Wellison Muchiutti",
+        "ballotName": "WELLISON MUCHIUTTI",
+        "number": "1512",
+        "party": "MDB",
+        "photo": "assets/fotos_tse/120002538948.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002545241",
+        "name": "Wesley Dias",
+        "ballotName": "WESLEY DIAS",
+        "number": "3055",
+        "party": "NOVO",
+        "photo": "assets/fotos_tse/120002545241.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002552945",
+        "name": "Zé Lopes",
+        "ballotName": "ZÉ LOPES",
+        "number": "2712",
+        "party": "DC",
+        "photo": "assets/fotos_tse/120002552945.webp",
         "locked": false
       }
     ],
     "senador1": [
       {
-        "id": "mock-sen1-01",
-        "name": "Candidato Exemplo Senado A",
-        "ballotName": "CANDIDATO SENADO A",
-        "number": "101",
-        "party": "PARTIDO EXEMPLO (MOCK)",
-        "photo": "",
+        "id": "tse-120002532721",
+        "name": "Beto Do Movimento",
+        "ballotName": "BETO DO MOVIMENTO",
+        "number": "500",
+        "party": "PSOL",
+        "photo": "assets/fotos_tse/120002532721.webp",
         "locked": false
       },
       {
-        "id": "mock-sen1-02",
-        "name": "Candidata Exemplo Senado B",
-        "ballotName": "CANDIDATA SENADO B",
-        "number": "151",
-        "party": "PARTIDO EXEMPLO (MOCK)",
-        "photo": "",
+        "id": "tse-120002535769",
+        "name": "Capitão Contar",
+        "ballotName": "CAPITÃO CONTAR",
+        "number": "221",
+        "party": "PL",
+        "photo": "assets/fotos_tse/120002535769.webp",
         "locked": false
       },
       {
-        "id": "mock-sen1-03",
-        "name": "Candidato Exemplo Senado C",
-        "ballotName": "CANDIDATO SENADO C",
+        "id": "tse-120002534952",
+        "name": "Daniel Junior",
+        "ballotName": "DANIEL JUNIOR",
+        "number": "365",
+        "party": "AGIR",
+        "photo": "assets/fotos_tse/120002534952.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002551909",
+        "name": "Luiz Lemes",
+        "ballotName": "LUIZ LEMES",
+        "number": "277",
+        "party": "DC",
+        "photo": "assets/fotos_tse/120002551909.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002535764",
+        "name": "Reinaldo Azambuja",
+        "ballotName": "REINALDO AZAMBUJA",
         "number": "222",
-        "party": "PARTIDO EXEMPLO (MOCK)",
-        "photo": "",
+        "party": "PL",
+        "photo": "assets/fotos_tse/120002535764.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002552115",
+        "name": "Roberto Oshiro",
+        "ballotName": "ROBERTO OSHIRO",
+        "number": "300",
+        "party": "NOVO",
+        "photo": "assets/fotos_tse/120002552115.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002547434",
+        "name": "Soraya",
+        "ballotName": "SORAYA",
+        "number": "400",
+        "party": "PSB",
+        "photo": "assets/fotos_tse/120002547434.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002552196",
+        "name": "Valderi Garcia",
+        "ballotName": "VALDERI GARCIA",
+        "number": "290",
+        "party": "PCO",
+        "photo": "assets/fotos_tse/120002552196.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002552183",
+        "name": "Valter Da Comagran",
+        "ballotName": "VALTER DA COMAGRAN",
+        "number": "258",
+        "party": "PRD",
+        "photo": "assets/fotos_tse/120002552183.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002547435",
+        "name": "Vander Loubet",
+        "ballotName": "VANDER LOUBET",
+        "number": "133",
+        "party": "PT",
+        "photo": "assets/fotos_tse/120002547435.webp",
         "locked": false
       }
     ],
     "senador2": [
       {
-        "id": "mock-sen2-01",
-        "name": "Candidato Exemplo Senado D",
-        "ballotName": "CANDIDATO SENADO D",
-        "number": "202",
-        "party": "PARTIDO EXEMPLO (MOCK)",
-        "photo": "",
+        "id": "tse-120002532721",
+        "name": "Beto Do Movimento",
+        "ballotName": "BETO DO MOVIMENTO",
+        "number": "500",
+        "party": "PSOL",
+        "photo": "assets/fotos_tse/120002532721.webp",
         "locked": false
       },
       {
-        "id": "mock-sen2-02",
-        "name": "Candidata Exemplo Senado E",
-        "ballotName": "CANDIDATA SENADO E",
-        "number": "455",
-        "party": "PARTIDO EXEMPLO (MOCK)",
-        "photo": "",
+        "id": "tse-120002535769",
+        "name": "Capitão Contar",
+        "ballotName": "CAPITÃO CONTAR",
+        "number": "221",
+        "party": "PL",
+        "photo": "assets/fotos_tse/120002535769.webp",
         "locked": false
       },
       {
-        "id": "mock-sen2-03",
-        "name": "Candidato Exemplo Senado F",
-        "ballotName": "CANDIDATO SENADO F",
-        "number": "777",
-        "party": "PARTIDO EXEMPLO (MOCK)",
-        "photo": "",
+        "id": "tse-120002534952",
+        "name": "Daniel Junior",
+        "ballotName": "DANIEL JUNIOR",
+        "number": "365",
+        "party": "AGIR",
+        "photo": "assets/fotos_tse/120002534952.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002551909",
+        "name": "Luiz Lemes",
+        "ballotName": "LUIZ LEMES",
+        "number": "277",
+        "party": "DC",
+        "photo": "assets/fotos_tse/120002551909.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002535764",
+        "name": "Reinaldo Azambuja",
+        "ballotName": "REINALDO AZAMBUJA",
+        "number": "222",
+        "party": "PL",
+        "photo": "assets/fotos_tse/120002535764.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002552115",
+        "name": "Roberto Oshiro",
+        "ballotName": "ROBERTO OSHIRO",
+        "number": "300",
+        "party": "NOVO",
+        "photo": "assets/fotos_tse/120002552115.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002547434",
+        "name": "Soraya",
+        "ballotName": "SORAYA",
+        "number": "400",
+        "party": "PSB",
+        "photo": "assets/fotos_tse/120002547434.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002552196",
+        "name": "Valderi Garcia",
+        "ballotName": "VALDERI GARCIA",
+        "number": "290",
+        "party": "PCO",
+        "photo": "assets/fotos_tse/120002552196.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002552183",
+        "name": "Valter Da Comagran",
+        "ballotName": "VALTER DA COMAGRAN",
+        "number": "258",
+        "party": "PRD",
+        "photo": "assets/fotos_tse/120002552183.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002547435",
+        "name": "Vander Loubet",
+        "ballotName": "VANDER LOUBET",
+        "number": "133",
+        "party": "PT",
+        "photo": "assets/fotos_tse/120002547435.webp",
         "locked": false
       }
     ],
     "governador": [
       {
-        "id": "mock-gov-01",
-        "name": "Candidato Exemplo Governador A",
-        "ballotName": "GOVERNADOR EXEMPLO A",
-        "number": "10",
-        "party": "PARTIDO EXEMPLO (MOCK)",
-        "photo": "",
+        "id": "tse-120002552201",
+        "name": "Daniel Lemes",
+        "ballotName": "DANIEL LEMES",
+        "number": "29",
+        "party": "PCO",
+        "photo": "assets/fotos_tse/120002552201.webp",
         "locked": false
       },
       {
-        "id": "mock-gov-02",
-        "name": "Candidata Exemplo Governadora B",
-        "ballotName": "GOVERNADORA EXEMPLO B",
-        "number": "15",
-        "party": "PARTIDO EXEMPLO (MOCK)",
-        "photo": "",
+        "id": "tse-120002552155",
+        "name": "Delcidio Amaral",
+        "ballotName": "DELCIDIO AMARAL",
+        "number": "25",
+        "party": "PRD",
+        "photo": "assets/fotos_tse/120002552155.webp",
         "locked": false
       },
       {
-        "id": "mock-gov-03",
-        "name": "Candidato Exemplo Governador C",
-        "ballotName": "GOVERNADOR EXEMPLO C",
-        "number": "22",
-        "party": "PARTIDO EXEMPLO (MOCK)",
-        "photo": "",
+        "id": "tse-120002549681",
+        "name": "Economista Renato Gomes",
+        "ballotName": "ECONOMISTA RENATO GOMES",
+        "number": "27",
+        "party": "DC",
+        "photo": "assets/fotos_tse/120002549681.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002536582",
+        "name": "Eduardo Riedel",
+        "ballotName": "EDUARDO RIEDEL",
+        "number": "11",
+        "party": "PP",
+        "photo": "assets/fotos_tse/120002536582.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002539834",
+        "name": "Fábio Trad",
+        "ballotName": "FÁBIO TRAD",
+        "number": "13",
+        "party": "PT",
+        "photo": "assets/fotos_tse/120002539834.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002550198",
+        "name": "Jeferson Bezerra",
+        "ballotName": "JEFERSON BEZERRA",
+        "number": "36",
+        "party": "AGIR",
+        "photo": "assets/fotos_tse/120002550198.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002552191",
+        "name": "João Henrique Catan",
+        "ballotName": "JOÃO HENRIQUE CATAN",
+        "number": "30",
+        "party": "NOVO",
+        "photo": "assets/fotos_tse/120002552191.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-120002532257",
+        "name": "Lucien Rezende",
+        "ballotName": "LUCIEN REZENDE",
+        "number": "50",
+        "party": "PSOL",
+        "photo": "assets/fotos_tse/120002532257.webp",
         "locked": false
       }
     ],
     "presidente": [
       {
-        "id": "mock-pres-01",
-        "name": "Candidato Exemplo Presidente A",
-        "ballotName": "PRESIDENTE EXEMPLO A",
-        "number": "10",
-        "party": "PARTIDO EXEMPLO (MOCK)",
-        "photo": "",
+        "id": "tse-280002552484",
+        "name": "Clariana Barao",
+        "ballotName": "CLARIANA BARAO",
+        "number": "27",
+        "party": "DC",
+        "photo": "assets/fotos_tse/280002552484.webp",
         "locked": false
       },
       {
-        "id": "mock-pres-02",
-        "name": "Candidata Exemplo Presidente B",
-        "ballotName": "PRESIDENTE EXEMPLO B",
-        "number": "15",
-        "party": "PARTIDO EXEMPLO (MOCK)",
-        "photo": "",
+        "id": "tse-280002551975",
+        "name": "Edmilson Costa",
+        "ballotName": "EDMILSON COSTA",
+        "number": "21",
+        "party": "PCB",
+        "photo": "assets/fotos_tse/280002551975.webp",
         "locked": false
       },
       {
-        "id": "mock-pres-03",
-        "name": "Candidato Exemplo Presidente C",
-        "ballotName": "PRESIDENTE EXEMPLO C",
+        "id": "tse-280002551547",
+        "name": "Escritor Augusto Cury",
+        "ballotName": "ESCRITOR AUGUSTO CURY",
+        "number": "70",
+        "party": "AVANTE",
+        "photo": "assets/fotos_tse/280002551547.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-280002551544",
+        "name": "Flavio Bolsonaro",
+        "ballotName": "FLAVIO BOLSONARO",
         "number": "22",
-        "party": "PARTIDO EXEMPLO (MOCK)",
-        "photo": "",
+        "party": "PL",
+        "photo": "assets/fotos_tse/280002551544.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-280002541457",
+        "name": "Hertz Dias",
+        "ballotName": "HERTZ DIAS",
+        "number": "16",
+        "party": "PSTU",
+        "photo": "assets/fotos_tse/280002541457.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-280002542548",
+        "name": "Lula",
+        "ballotName": "LULA",
+        "number": "13",
+        "party": "PT",
+        "photo": "assets/fotos_tse/280002542548.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-280002553884",
+        "name": "Pablo Marçal",
+        "ballotName": "PABLO MARÇAL",
+        "number": "28",
+        "party": "PRTB",
+        "photo": "assets/fotos_tse/280002553884.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-280002540694",
+        "name": "Renan Santos",
+        "ballotName": "RENAN SANTOS",
+        "number": "14",
+        "party": "MISSÃO",
+        "photo": "assets/fotos_tse/280002540694.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-280002551932",
+        "name": "Ronaldo Caiado",
+        "ballotName": "RONALDO CAIADO",
+        "number": "55",
+        "party": "PSD",
+        "photo": "assets/fotos_tse/280002551932.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-280002552487",
+        "name": "Rui Costa Pimenta",
+        "ballotName": "RUI COSTA PIMENTA",
+        "number": "29",
+        "party": "PCO",
+        "photo": "assets/fotos_tse/280002552487.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-280002538811",
+        "name": "Samara",
+        "ballotName": "SAMARA",
+        "number": "80",
+        "party": "UP",
+        "photo": "assets/fotos_tse/280002538811.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-280002548139",
+        "name": "Veterinário Wilson Grassi",
+        "ballotName": "VETERINÁRIO WILSON GRASSI",
+        "number": "35",
+        "party": "DEMOCRATA",
+        "photo": "assets/fotos_tse/280002548139.webp",
+        "locked": false
+      },
+      {
+        "id": "tse-280002539826",
+        "name": "Zema",
+        "ballotName": "ZEMA",
+        "number": "30",
+        "party": "NOVO",
+        "photo": "assets/fotos_tse/280002539826.webp",
         "locked": false
       }
     ]

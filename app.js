@@ -434,11 +434,15 @@ function searchCandidates(query) {
   filtered.forEach(cand => {
     const item = document.createElement('div');
     item.className = 'candidate-list-item';
+    const photoHtml = cand.photo
+      ? `<img src="${cand.photo}" alt="${cand.name}" class="candidate-thumb" style="width: 52px; height: 52px; object-fit: cover; border-radius: 8px;" onerror="this.outerHTML='<div class=\\'candidate-item-photo\\'>👤</div>'">`
+      : `<div class="candidate-item-photo">👤</div>`;
+
     item.innerHTML = `
-      <div class="candidate-item-photo">👤</div>
+      ${photoHtml}
       <div class="candidate-item-info">
         <div class="candidate-item-name">${cand.name}</div>
-        <div class="candidate-item-sub">${cand.party || 'MOCK'}</div>
+        <div class="candidate-item-sub">${cand.party || ''}</div>
       </div>
       <div class="candidate-item-number">${cand.number}</div>
     `;
@@ -519,11 +523,25 @@ async function generateSantinho() {
   const width = canvas.width;
   const height = canvas.height;
 
-  // Carregar imagens oficiais
-  const [photoImg, logoImg] = await Promise.all([
+  // Carregar imagens oficiais e fotos dos candidatos selecionados
+  const candidateImages = {};
+  const loadPromises = [
     loadImage('assets/bruno-ortiz.png'),
     loadImage('assets/bruno-ortiz-logo.png')
-  ]);
+  ];
+
+  appData.offices.forEach(office => {
+    const vote = appState.votes[office.id];
+    if (vote && vote.photo && office.id !== 'deputadoEstadual') {
+      loadPromises.push(
+        loadImage(vote.photo).then(img => {
+          if (img) candidateImages[office.id] = img;
+        })
+      );
+    }
+  });
+
+  const [photoImg, logoImg] = await Promise.all(loadPromises);
 
   // 1. Fundo Branco com gradiente suave de fundo
   ctx.fillStyle = '#FFFFFF';
@@ -597,25 +615,25 @@ async function generateSantinho() {
 
     currentY += 24;
 
-    // Se for Bruno Ortiz ou candidato com foto pequena
     const boxSize = 44;
     const boxGap = 7;
     const boxHeight = 52;
     let startBoxX = colX;
 
-    // Se for Bruno Ortiz, desenhar foto mini oficial ao lado dos números
-    if (isBruno && photoImg) {
+    // Foto mini oficial ao lado dos números
+    const candImgToDraw = isBruno ? photoImg : candidateImages[office.id];
+    if (candImgToDraw) {
       const thumbSize = 46;
       ctx.save();
       ctx.beginPath();
       ctx.arc(startBoxX + thumbSize / 2, currentY + boxHeight / 2, thumbSize / 2, 0, Math.PI * 2);
       ctx.clip();
-      ctx.drawImage(photoImg, startBoxX, currentY + (boxHeight - thumbSize) / 2, thumbSize, thumbSize);
+      ctx.drawImage(candImgToDraw, startBoxX, currentY + (boxHeight - thumbSize) / 2, thumbSize, thumbSize);
       ctx.restore();
 
-      // Borda da foto do Bruno
+      // Borda da foto (Amarela para Bruno, Verde para demais candidatos escolhidos)
       ctx.save();
-      ctx.strokeStyle = '#FFCC29';
+      ctx.strokeStyle = isBruno ? '#FFCC29' : '#76C04E';
       ctx.lineWidth = 2.5;
       ctx.beginPath();
       ctx.arc(startBoxX + thumbSize / 2, currentY + boxHeight / 2, thumbSize / 2, 0, Math.PI * 2);
