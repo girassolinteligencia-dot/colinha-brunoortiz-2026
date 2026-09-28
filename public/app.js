@@ -998,12 +998,12 @@
     const textoEleitor = eleitorNome ? `${eleitorNome.toUpperCase()} VOTA ASSIM:` : "MINHA COLINHA 2026:";
 
     ctx.save();
-    ctx.font = '850 19px "Outfit", sans-serif';
+    ctx.font = '850 23px "Outfit", sans-serif';
     const textMetrics = ctx.measureText(textoEleitor);
-    const badgeH = 34;
-    const badgeW = textMetrics.width + 56;
+    const badgeH = 42;
+    const badgeW = textMetrics.width + 64;
     const badgeX = startX;
-    const badgeY = 28;
+    const badgeY = 24;
     const badgeR = badgeH / 2;
 
     // Desenhar Pill Badge Azul com cantos arredondados
@@ -1016,30 +1016,30 @@
     ctx.closePath();
 
     ctx.fillStyle = "#006cb5";
-    ctx.shadowColor = "rgba(0, 108, 181, 0.35)";
-    ctx.shadowBlur = 8;
-    ctx.shadowOffsetY = 3;
+    ctx.shadowColor = "rgba(0, 108, 181, 0.45)";
+    ctx.shadowBlur = 10;
+    ctx.shadowOffsetY = 4;
     ctx.fill();
 
     // Reset shadow para o texto
     ctx.shadowColor = "transparent";
 
     // Borda sutil no badge
-    ctx.strokeStyle = "rgba(255, 255, 255, 0.45)";
-    ctx.lineWidth = 1.2;
+    ctx.strokeStyle = "rgba(255, 255, 255, 0.65)";
+    ctx.lineWidth = 1.5;
     ctx.stroke();
 
     // Estrela Dourada Cívica
-    ctx.font = '900 20px "Outfit", sans-serif';
+    ctx.font = '900 24px "Outfit", sans-serif';
     ctx.fillStyle = "#ffd700";
     ctx.textAlign = "left";
     ctx.textBaseline = "middle";
-    ctx.fillText("★", badgeX + 13, badgeY + badgeH / 2);
+    ctx.fillText("★", badgeX + 16, badgeY + badgeH / 2);
 
     // Texto do Eleitor em Branco Puro
-    ctx.font = '850 19px "Outfit", sans-serif';
+    ctx.font = '850 23px "Outfit", sans-serif';
     ctx.fillStyle = "#ffffff";
-    ctx.fillText(textoEleitor, badgeX + 37, badgeY + badgeH / 2 + 1);
+    ctx.fillText(textoEleitor, badgeX + 44, badgeY + badgeH / 2 + 1);
     ctx.restore();
 
     // 2. LINHAS DE VOTAÇÃO: 6 LINHAS DE CAIXAS DE DÍGITOS

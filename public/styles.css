@@ -567,28 +567,28 @@ body {
 /* Botão Radiante Dourado (Idêntico à Referência 1) */
 .btn-ref-start-gold {
   width: 100%;
-  height: 58px;
-  border-radius: 29px;
-  border: none;
-  background: linear-gradient(180deg, #fde047 0%, #eab308 55%, #ca8a04 100%);
-  color: #052516;
+  height: 56px;
+  border-radius: 16px;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  background: linear-gradient(135deg, #ffd700 0%, #ffcc29 50%, #f59e0b 100%);
+  color: #00223f;
   font-family: var(--font-display);
-  font-size: 17px;
+  font-size: 16.5px;
   font-weight: 900;
   letter-spacing: 0.5px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
   cursor: pointer;
-  box-shadow: 0 10px 28px rgba(234, 179, 8, 0.45), 0 2px 6px rgba(0, 0, 0, 0.3);
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 28px rgba(255, 204, 41, 0.4), 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .btn-ref-start-gold:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 34px rgba(234, 179, 8, 0.6);
-  filter: brightness(1.06);
+  box-shadow: 0 14px 34px rgba(255, 204, 41, 0.55);
+  filter: brightness(1.05);
 }
 
 .btn-ref-start-gold:active {
@@ -1231,27 +1231,29 @@ body.modal-selecao-aberto {
 }
 
 .btn-voltar-selecao {
-  background: #f1f5f9;
-  border: 1.5px solid #cbd5e1;
-  border-radius: 10px;
+  background: #f0f7fc;
+  border: 1.5px solid #bae6fd;
+  border-radius: 12px;
   height: 42px;
-  padding: 0 14px;
+  padding: 0 16px;
   display: inline-flex;
   align-items: center;
   gap: 8px;
   font-family: var(--font-display);
   font-size: 13.5px;
-  font-weight: 800;
-  color: #0c2c62;
+  font-weight: 850;
+  color: #004d82;
   cursor: pointer;
-  transition: all 0.15s ease;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   user-select: none;
 }
 
 .btn-voltar-selecao:hover {
-  background: #eff6ff;
+  background: #006cb5;
   border-color: #006cb5;
-  color: #006cb5;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 108, 181, 0.25);
 }
 
 .btn-voltar-arrow {
@@ -2081,28 +2083,29 @@ body.modal-selecao-aberto {
 
 .btn-acao-salvar-larga {
   width: 100%;
-  height: 48px;
+  height: 52px;
   border-radius: 14px;
-  background: #ffffff;
-  border: 2px solid #14532d;
-  color: #14532d;
+  background: linear-gradient(135deg, #006cb5 0%, #004d82 100%);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
   font-family: var(--font-display);
-  font-size: 15px;
-  font-weight: 800;
+  font-size: 16px;
+  font-weight: 850;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  transition: all 0.2s ease;
+  box-shadow: 0 8px 22px rgba(0, 108, 181, 0.35);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .btn-acao-salvar-larga:hover {
-  background: #f0fdf4;
-  border-color: #0f3d21;
+  background: linear-gradient(135deg, #0284c7 0%, #006cb5 100%);
+  border-color: #38bdf8;
+  color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(20, 83, 45, 0.15);
+  box-shadow: 0 10px 28px rgba(0, 108, 181, 0.5);
 }
 
 .btn-acao-salvar-larga:active {
@@ -3130,132 +3133,145 @@ body {
   color: #ffffff;
   border: none;
   border-radius: 14px;
-  padding: 14px 20px;
+  height: 52px;
+  padding: 0 20px;
   font-family: var(--font-display);
-  font-size: 16.5px;
-  font-weight: 800;
+  font-size: 16px;
+  font-weight: 850;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   cursor: pointer;
   box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);
-  transition: all 0.2s ease;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .btn-acao-primaria.btn-acao-whatsapp:hover {
-  background: #22c35e;
+  background: #20ba5a;
   transform: translateY(-2px);
   box-shadow: 0 10px 24px rgba(37, 211, 102, 0.45);
 }
 
-
 .btn-acao-secundaria.btn-acao-salvar-larga {
-  background: #ffffff;
-  color: #0f3d21;
-  border: 2px solid #ffffff;
+  background: linear-gradient(135deg, #006cb5 0%, #004d82 100%);
+  color: #ffffff;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
   border-radius: 14px;
-  padding: 13px 20px;
+  height: 52px;
+  padding: 0 20px;
   font-family: var(--font-display);
   font-size: 16px;
-  font-weight: 800;
+  font-weight: 850;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   cursor: pointer;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
-  transition: all 0.2s ease;
+  box-shadow: 0 8px 22px rgba(0, 108, 181, 0.35);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .btn-acao-secundaria.btn-acao-salvar-larga:hover {
-  background: #fef08a;
-  border-color: #fef08a;
-  color: #0f3d21;
+  background: linear-gradient(135deg, #0284c7 0%, #006cb5 100%);
+  border-color: #38bdf8;
+  color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 10px 28px rgba(0, 108, 181, 0.5);
 }
 
 .acoes-finais-links {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 10px;
   width: 100%;
   max-width: 540px;
 }
 
 .btn-acao-editar {
   flex: 1;
-  background: rgba(255, 255, 255, 0.15) !important;
-  border: 1.5px solid rgba(255, 255, 255, 0.4) !important;
+  background: rgba(0, 108, 181, 0.15) !important;
+  border: 1.5px solid rgba(0, 108, 181, 0.45) !important;
   color: #ffffff !important;
-  font-size: 14.5px !important;
-  padding: 12px 14px !important;
-  border-radius: 12px !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+  font-family: var(--font-display) !important;
+  font-size: 13.5px !important;
+  font-weight: 800 !important;
+  height: 46px !important;
+  padding: 0 12px !important;
+  border-radius: 14px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
 }
 
 .btn-acao-editar:hover {
-  background: rgba(255, 255, 255, 0.28) !important;
-  border-color: #ffffff !important;
+  background: rgba(0, 108, 181, 0.32) !important;
+  border-color: #38bdf8 !important;
+  transform: translateY(-2px);
 }
 
 .btn-acao-rever {
   flex: 1;
-  background: rgba(255, 255, 255, 0.18) !important;
-  border: 1.5px solid rgba(255, 255, 255, 0.45) !important;
+  background: rgba(0, 108, 181, 0.15) !important;
+  border: 1.5px solid rgba(0, 108, 181, 0.45) !important;
   color: #ffffff !important;
-  font-size: 14px !important;
-  padding: 12px 10px !important;
-  border-radius: 12px !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+  font-family: var(--font-display) !important;
+  font-size: 13.5px !important;
+  font-weight: 800 !important;
+  height: 46px !important;
+  padding: 0 10px !important;
+  border-radius: 14px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18) !important;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
-  font-family: var(--font-display);
-  font-weight: 800;
   transition: all 0.2s ease;
 }
 
 .btn-acao-rever:hover {
-  background: rgba(255, 255, 255, 0.32) !important;
-  border-color: #ffffff !important;
+  background: rgba(0, 108, 181, 0.32) !important;
+  border-color: #38bdf8 !important;
   transform: translateY(-2px);
 }
 
 .btn-acao-recomecar {
   flex: 1;
-  background: #ffffff;
-  border: 2px solid #ef4444;
-  color: #b91c1c;
+  background: rgba(239, 68, 68, 0.12);
+  border: 1.5px solid rgba(239, 68, 68, 0.5);
+  color: #fca5a5;
   font-family: var(--font-display);
-  font-size: 14.5px;
-  font-weight: 900;
-  letter-spacing: 0.5px;
-  padding: 12px 16px;
-  border-radius: 12px;
+  font-size: 13.5px;
+  font-weight: 850;
+  letter-spacing: 0.3px;
+  height: 46px;
+  padding: 0 12px;
+  border-radius: 14px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  box-shadow: 0 4px 14px rgba(239, 68, 68, 0.25);
+  gap: 6px;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.15);
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .btn-acao-recomecar svg {
-  color: #dc2626;
+  color: #f87171;
 }
 
 .btn-acao-recomecar:hover {
-  background: #fee2e2;
-  border-color: #dc2626;
-  color: #991b1b;
+  background: rgba(239, 68, 68, 0.22);
+  border-color: #ef4444;
+  color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(239, 68, 68, 0.4);
+  box-shadow: 0 6px 18px rgba(239, 68, 68, 0.3);
 }
 
 .btn-acao-recomecar:active {
@@ -3265,10 +3281,11 @@ body {
 @media (max-width: 480px) {
   .acoes-finais-links {
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
   }
-  .btn-acao-editar, .btn-acao-recomecar {
+  .btn-acao-editar, .btn-acao-rever, .btn-acao-recomecar {
     width: 100%;
+    height: 48px !important;
   }
 }
 
@@ -3347,33 +3364,33 @@ body {
 
 /* Cabeçalho do Eleitor: Chancela / Pill Badge Azul Oficial de Votação */
 .colinha-vert-eleitor-header {
-  margin-bottom: 0.9cqi;
+  margin-bottom: 1.1cqi;
   width: fit-content;
 }
 
 .colinha-vert-eleitor-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.7cqi;
+  gap: 0.8cqi;
   background: linear-gradient(135deg, #006cb5 0%, #004d82 100%);
   color: #ffffff;
-  padding: 0.5cqi 1.6cqi 0.5cqi 1.4cqi;
+  padding: 0.65cqi 2cqi 0.65cqi 1.6cqi;
   border-radius: 999px;
   font-family: var(--font-display);
-  font-size: 2.2cqi;
+  font-size: 2.85cqi;
   font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
   line-height: 1.2;
-  box-shadow: 0 3px 8px rgba(0, 108, 181, 0.35);
-  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 4px 12px rgba(0, 108, 181, 0.45);
+  border: 1.5px solid rgba(255, 255, 255, 0.65);
 }
 
 .colinha-vert-eleitor-star {
   color: #ffd700;
-  font-size: 2.2cqi;
+  font-size: 2.85cqi;
   line-height: 1;
-  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.35));
 }
 
 .colinha-vert-rows-wrap {
