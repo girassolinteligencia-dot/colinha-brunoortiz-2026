@@ -761,6 +761,8 @@ async function generateSantinho() {
     if (previewImg) {
       previewImg.src = previewUrl;
     }
+    // Atualizar também o preview textual do WhatsApp
+    updateWhatsAppPreview();
   }, 'image/png');
 }
 
@@ -863,21 +865,72 @@ async function shareSantinho() {
 }
 
 // ==========================================
-// 8.1 DISPARO DIRETO NO WHATSAPP
+// 8.1 CONSTRUÇÃO E DISPARO NO WHATSAPP
 // ==========================================
-function sendViaWhatsApp() {
-  triggerHaptic('success');
+function buildWhatsAppMessage() {
   const voterName = (appState.voter.firstName || 'Amigo').trim();
   const upperName = voterName.toUpperCase();
-  
-  // Montar resumo leve e persuasivo
-  const textMsg = `Olá! Montei minha *Colinha Eleitoral 2026*! 🇧🇷\n\n` +
-    `Meu Deputado Estadual já está confirmado:\n` +
-    `⭐ *BRUNO ORTIZ — 10222*\n` +
-    `_"O troco chegou. Vai dar B.O!"_\n\n` +
-    `Monte a sua também em segundos e leve salva no celular:\n` +
-    `👉 https://colinhabrunoortiz.pages.dev`;
 
+  let msg = `Olá! Aqui é o *${upperName}*! 🇧🇷\n\n`;
+  msg += `Já montei minha *Colinha Oficial para as Eleições 2026* e quero compartilhar com você a minha sequência de votação:\n\n`;
+
+  // Bruno Ortiz Destaque Máximo
+  msg += `⭐ *DEPUTADO ESTADUAL:*\n`;
+  msg += `👉 *BRUNO ORTIZ — 10222*\n`;
+  msg += `_“O troco chegou. Vai dar B.O!”_\n\n`;
+
+  // Demais votos selecionados pelo eleitor
+  const df = appState.votes.deputadoFederal;
+  if (df) {
+    msg += `🔷 *DEPUTADO FEDERAL:* ${df.name} (${df.number})\n`;
+  }
+
+  const s1 = appState.votes.senador1;
+  if (s1) {
+    msg += `🔷 *SENADOR 1:* ${s1.name} (${s1.number})\n`;
+  }
+
+  const s2 = appState.votes.senador2;
+  if (s2) {
+    msg += `🔷 *SENADOR 2:* ${s2.name} (${s2.number})\n`;
+  }
+
+  const gov = appState.votes.governador;
+  if (gov) {
+    msg += `🔷 *GOVERNADOR:* ${gov.name} (${gov.number})\n`;
+  }
+
+  const pres = appState.votes.presidente;
+  if (pres) {
+    msg += `🔷 *PRESIDENTE:* ${pres.name} (${pres.number})\n`;
+  }
+
+  msg += `\nPeço de coração o seu voto e apoio para o *Bruno Ortiz 10222* e para o nosso time da mudança! 🚀\n\n`;
+  msg += `Monte sua colinha também em 1 minuto e leve salva no celular:\n`;
+  msg += `📲 https://colinhabrunoortiz.pages.dev`;
+
+  return msg;
+}
+
+function updateWhatsAppPreview() {
+  const previewBox = document.getElementById('whatsappPreviewText');
+  if (!previewBox) return;
+
+  const rawMsg = buildWhatsAppMessage();
+  // Formatar para visualização no balão HTML
+  let formattedHtml = rawMsg
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/\*(.*?)\*/g, '<strong>$1</strong>')
+    .replace(/_(.*?)_/g, '<em>$1</em>');
+
+  previewBox.innerHTML = formattedHtml;
+}
+
+function sendViaWhatsApp() {
+  triggerHaptic('success');
+  const textMsg = buildWhatsAppMessage();
   const encoded = encodeURIComponent(textMsg);
   const waUrl = `https://api.whatsapp.com/send?text=${encoded}`;
   window.open(waUrl, '_blank');
