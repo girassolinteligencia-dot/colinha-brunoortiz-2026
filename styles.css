@@ -1,8 +1,8 @@
 :root {
   /* Identidade Visual Bruno Ortiz extraída dos assets oficiais */
   --bruno-blue: #006CB5;
-  --bruno-blue-dark: #005088;
-  --bruno-blue-light: #00AFEF;
+  --bruno-blue-dark: #004D82;
+  --bruno-blue-light: #0088E0;
   --bruno-green: #76C04E;
   --bruno-green-dark: #4F932D;
   --bruno-yellow: #FFCC29;
@@ -40,7 +40,7 @@
 
 body {
   font-family: var(--font-family);
-  background-color: #EBF3F8;
+  background-color: #E8F2FA;
   color: var(--gray-800);
   line-height: 1.4;
   min-height: 100vh;
@@ -55,7 +55,7 @@ body {
   max-width: 440px;
   min-height: 100vh;
   background-color: var(--white);
-  box-shadow: 0 0 40px rgba(0, 50, 100, 0.15);
+  box-shadow: 0 0 40px rgba(0, 108, 181, 0.16);
   display: flex;
   flex-direction: column;
   position: relative;
@@ -84,7 +84,7 @@ body {
    TELA 1: WELCOME SCREEN (ESTILO REFERÊNCIA MARQUINHOS / BRUNO ORTIZ)
 ========================================= */
 .welcome-ref-section {
-  background: linear-gradient(175deg, #004D82 0%, #006CB5 45%, #00365C 100%);
+  background: linear-gradient(175deg, #005691 0%, #006CB5 45%, #004575 100%);
   color: var(--white);
   padding: calc(16px + var(--safe-top)) 16px calc(24px + var(--safe-bottom));
   min-height: 100vh;
@@ -457,7 +457,7 @@ body {
 .btn-primary {
   width: 100%;
   min-height: 56px;
-  background-color: var(--bruno-green);
+  background-color: var(--bruno-blue);
   color: var(--white);
   border: none;
   border-radius: var(--radius-md);
@@ -470,13 +470,13 @@ body {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  box-shadow: 0 4px 14px rgba(118, 192, 78, 0.4);
+  box-shadow: 0 4px 14px rgba(0, 108, 181, 0.35);
   transition: transform 0.15s ease, background-color 0.15s ease;
 }
 
 .btn-primary:active {
   transform: scale(0.98);
-  background-color: var(--bruno-green-dark);
+  background-color: var(--bruno-blue-dark);
 }
 
 .btn-primary:disabled {
@@ -503,9 +503,9 @@ body {
 }
 
 .header-voter-pill {
-  background-color: #E8F5E9;
-  border: 1px solid var(--bruno-green);
-  color: #1B5E20;
+  background-color: #E8F2FA;
+  border: 1px solid var(--bruno-blue);
+  color: var(--bruno-blue-dark);
   font-weight: 700;
   font-size: 0.85rem;
   padding: 4px 12px;
@@ -601,13 +601,13 @@ body {
 }
 
 .office-card.is-clickable:hover {
-  border-color: var(--bruno-green);
-  box-shadow: var(--shadow-md);
+  border-color: var(--bruno-blue);
+  box-shadow: 0 4px 16px rgba(0, 108, 181, 0.15);
 }
 
 .office-card.is-clickable:active {
   transform: scale(0.985);
-  background-color: #FAFCF9;
+  background-color: #F0F7FC;
 }
 
 .office-card.is-locked {
@@ -1050,8 +1050,8 @@ body {
 }
 
 .review-card-item.is-bruno {
-  border-color: var(--bruno-green);
-  background: linear-gradient(90deg, #F0FDF4 0%, #FFFFFF 100%);
+  border-color: var(--bruno-blue);
+  background: linear-gradient(90deg, #F0F7FC 0%, #FFFFFF 100%);
   border-width: 2px;
 }
 
