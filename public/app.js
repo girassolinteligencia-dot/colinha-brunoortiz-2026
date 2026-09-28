@@ -1535,21 +1535,32 @@
       });
     }
 
-    // Proteção Básica Anti-Clonagem e Anti-Inspeção do Front-End
+    // Proteção Anti-Clonagem e Anti-Inspeção do Front-End
     document.addEventListener("contextmenu", (e) => {
-      // Permite botão direito apenas dentro de inputs de texto para colar
       if (e.target && (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA")) return;
       e.preventDefault();
     }, { passive: false });
 
+    // Bloqueia arrastar imagens e elementos para fora da página
+    document.addEventListener("dragstart", (e) => {
+      e.preventDefault();
+    }, { passive: false });
+
     document.addEventListener("keydown", (e) => {
-      // Bloquear atalhos comuns de inspeção rápida (F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, Ctrl+S)
+      const isInput = e.target && (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA");
+      const isCmdOrCtrl = e.ctrlKey || e.metaKey;
+
+      // Bloquear atalhos de inspeção e código-fonte (F12, Ctrl/Cmd + Shift + I/J/C, Ctrl/Cmd + U, Ctrl/Cmd + S)
       if (
         e.key === "F12" ||
-        (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "i" || e.key === "J" || e.key === "j" || e.key === "C" || e.key === "c")) ||
-        (e.ctrlKey && (e.key === "u" || e.key === "U" || e.key === "s" || e.key === "S"))
+        (isCmdOrCtrl && e.shiftKey && (e.key === "I" || e.key === "i" || e.key === "J" || e.key === "j" || e.key === "C" || e.key === "c")) ||
+        (isCmdOrCtrl && (e.key === "u" || e.key === "U" || e.key === "s" || e.key === "S"))
       ) {
-        if (e.target && (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA")) return;
+        if (!isInput) e.preventDefault();
+      }
+
+      // Bloquear Ctrl/Cmd + C (copiar) fora de inputs
+      if (isCmdOrCtrl && (e.key === "c" || e.key === "C") && !isInput) {
         e.preventDefault();
       }
     });
