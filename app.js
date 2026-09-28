@@ -871,42 +871,42 @@ function buildWhatsAppMessage() {
   const voterName = (appState.voter.firstName || 'Amigo').trim();
   const upperName = voterName.toUpperCase();
 
-  let msg = `Olá! Aqui é o *${upperName}*! 🇧🇷\n\n`;
-  msg += `Já montei minha *Colinha Oficial para as Eleições 2026* e quero compartilhar com você a minha sequência de votação:\n\n`;
+  let msg = `Opa, tudo bem? Aqui é o *${upperName}*! 🇧🇷\n\n`;
+  msg += `Já fechei minha colinha pra não errar nada na urna em 2026. Dá uma olhada em quem eu vou votar:\n\n`;
 
-  // Bruno Ortiz Destaque Máximo
-  msg += `⭐ *DEPUTADO ESTADUAL:*\n`;
-  msg += `👉 *BRUNO ORTIZ — 10222*\n`;
+  // 1. Deputado Federal (1º Voto)
+  const df = appState.votes.deputadoFederal;
+  msg += `1️⃣ *DEPUTADO FEDERAL (4 dígitos):*\n`;
+  msg += df ? `👉 *${df.name}* — *${df.number}*\n\n` : `👉 _(Ainda vou decidir)_\n\n`;
+
+  // 2. Deputado Estadual (2º Voto - Bruno Ortiz 10222)
+  msg += `2️⃣ *DEPUTADO ESTADUAL (5 dígitos):*\n`;
+  msg += `👉 ⭐ *BRUNO ORTIZ — 10222* ⭐\n`;
   msg += `_“O troco chegou. Vai dar B.O!”_\n\n`;
 
-  // Demais votos selecionados pelo eleitor
-  const df = appState.votes.deputadoFederal;
-  if (df) {
-    msg += `🔷 *DEPUTADO FEDERAL:* ${df.name} (${df.number})\n`;
-  }
-
+  // 3. Senador 1 (3º Voto)
   const s1 = appState.votes.senador1;
-  if (s1) {
-    msg += `🔷 *SENADOR 1:* ${s1.name} (${s1.number})\n`;
-  }
+  msg += `3️⃣ *SENADOR 1 (3 dígitos):*\n`;
+  msg += s1 ? `👉 *${s1.name}* — *${s1.number}*\n\n` : `👉 _(Ainda vou decidir)_\n\n`;
 
+  // 4. Senador 2 (4º Voto)
   const s2 = appState.votes.senador2;
-  if (s2) {
-    msg += `🔷 *SENADOR 2:* ${s2.name} (${s2.number})\n`;
-  }
+  msg += `4️⃣ *SENADOR 2 (3 dígitos):*\n`;
+  msg += s2 ? `👉 *${s2.name}* — *${s2.number}*\n\n` : `👉 _(Ainda vou decidir)_\n\n`;
 
+  // 5. Governador (5º Voto)
   const gov = appState.votes.governador;
-  if (gov) {
-    msg += `🔷 *GOVERNADOR:* ${gov.name} (${gov.number})\n`;
-  }
+  msg += `5️⃣ *GOVERNADOR (2 dígitos):*\n`;
+  msg += gov ? `👉 *${gov.name}* — *${gov.number}*\n\n` : `👉 _(Ainda vou decidir)_\n\n`;
 
+  // 6. Presidente (6º Voto)
   const pres = appState.votes.presidente;
-  if (pres) {
-    msg += `🔷 *PRESIDENTE:* ${pres.name} (${pres.number})\n`;
-  }
+  msg += `6️⃣ *PRESIDENTE (2 dígitos):*\n`;
+  msg += pres ? `👉 *${pres.name}* — *${pres.number}*\n\n` : `👉 _(Ainda vou decidir)_\n\n`;
 
-  msg += `\nPeço de coração o seu voto e apoio para o *Bruno Ortiz 10222* e para o nosso time da mudança! 🚀\n\n`;
-  msg += `Monte sua colinha também em 1 minuto e leve salva no celular:\n`;
+  // Chamada e Pedido Popular de Votos
+  msg += `Tô junto com essa turma e conto com a sua força pro *Bruno Ortiz 10222*! Vamos juntos fazer a diferença! 👊💥\n\n`;
+  msg += `Faz a sua colinha também rapidinho e salva no zap:\n`;
   msg += `📲 https://colinhabrunoortiz.pages.dev`;
 
   return msg;
