@@ -660,31 +660,31 @@ body {
 
 .step-circle:hover {
   transform: scale(1.1);
-  border-color: #4ade80;
-  color: #4ade80;
-  background: rgba(34, 197, 94, 0.2);
+  border-color: #38bdf8;
+  color: #38bdf8;
+  background: rgba(0, 108, 181, 0.25);
 }
 
 .step-circle.ativo {
-  background: #15803d;
+  background: #006cb5;
   border-color: #facc15;
   color: #ffffff;
-  box-shadow: 0 0 18px rgba(34, 197, 94, 0.6), 0 0 8px rgba(250, 204, 21, 0.4);
+  box-shadow: 0 0 18px rgba(0, 108, 181, 0.7), 0 0 8px rgba(250, 204, 21, 0.5);
   transform: scale(1.18);
 }
 
 .step-circle.concluido {
-  background: #15803d;
-  border-color: #22c55e;
+  background: #004d82;
+  border-color: #38bdf8;
   color: #ffffff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
 .step-circle.fixado-bloqueado {
-  background: #15803d;
+  background: #006cb5;
   border-color: #facc15;
   color: #facc15;
-  box-shadow: 0 0 12px rgba(250, 204, 21, 0.35);
+  box-shadow: 0 0 12px rgba(250, 204, 21, 0.45);
 }
 
 .step-connector-line {
@@ -696,8 +696,8 @@ body {
 }
 
 .step-connector-line.preenchida {
-  background: #22c55e;
-  box-shadow: 0 0 8px rgba(34, 197, 94, 0.45);
+  background: #38bdf8;
+  box-shadow: 0 0 8px rgba(56, 189, 248, 0.55);
 }
 
 /* ==========================================================================
@@ -868,7 +868,7 @@ body {
   font-family: var(--font-display);
   font-size: 19px;
   font-weight: 900;
-  color: #14532d;
+  color: #004d82;
   text-transform: uppercase;
   letter-spacing: 0.8px;
   border-bottom: 2px solid #e5dfd2;
@@ -895,7 +895,7 @@ body {
   font-family: var(--font-display);
   font-size: 21px;
   font-weight: 900;
-  color: #0c2c62;
+  color: #004d82;
   line-height: 1.18;
   white-space: normal;
   word-break: normal;
@@ -903,14 +903,14 @@ body {
 }
 
 .cedula-area-clicavel.vazio .cedula-cand-nome {
-  color: #15803d;
+  color: #006cb5;
   font-size: 19px;
 }
 
 .cedula-cand-partido {
   font-size: 12px;
   font-weight: 800;
-  color: #15803d;
+  color: #006cb5;
 }
 
 /* Layout Miolo: Foto Grande em Máxima Evidência ao lado do Número */
@@ -928,10 +928,10 @@ body {
   height: 94px;
   border-radius: 8px;
   overflow: hidden;
-  border: 2px solid #cbbfab;
-  background: #eeeae0;
+  border: 2px solid #93c5fd;
+  background: #f0f7ff;
   flex-shrink: 0;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  box-shadow: 0 4px 10px rgba(0, 108, 181, 0.14);
 }
 
 .cedula-foto-frame img {
@@ -958,7 +958,7 @@ body {
   font-family: var(--font-display);
   font-size: 38px;
   font-weight: 900;
-  color: #0f3d21;
+  color: #004d82;
   line-height: 1;
   letter-spacing: -0.5px;
 }
@@ -990,13 +990,13 @@ body {
 }
 
 .btn-cedula-confirmar {
-  background: #14532d;
-  color: #fef08a;
-  box-shadow: 0 2px 8px rgba(20, 83, 45, 0.28);
+  background: #006cb5;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 108, 181, 0.28);
 }
 
 .btn-cedula-confirmar:hover {
-  background: #0f3d21;
+  background: #004d82;
   transform: translateY(-1px);
 }
 
@@ -1021,8 +1021,8 @@ body {
   height: 36px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.92);
-  border: 1.5px solid #ded7cb;
-  color: #14532d;
+  border: 1.5px solid #bfdbfe;
+  color: #006cb5;
   font-size: 22px;
   font-weight: 900;
   display: flex;
@@ -1035,8 +1035,8 @@ body {
 }
 
 .nicho-nav-arrow:hover {
-  background: #14532d;
-  color: #fef08a;
+  background: #006cb5;
+  color: #ffffff;
   transform: translateY(-50%) scale(1.08);
 }
 
@@ -1057,13 +1057,13 @@ body {
 }
 
 .cedula-area-clicavel.vazio {
-  border-color: #10b981;
-  background: rgba(16, 185, 129, 0.04);
+  border-color: #006cb5;
+  background: rgba(0, 108, 181, 0.04);
 }
 
 .cedula-area-clicavel.vazio:hover {
-  background: rgba(16, 185, 129, 0.09);
-  border-color: #059669;
+  background: rgba(0, 108, 181, 0.09);
+  border-color: #004d82;
 }
 
 .cedula-area-clicavel.preenchido {
@@ -1071,7 +1071,7 @@ body {
 }
 
 .cedula-area-clicavel.preenchido:hover {
-  background: rgba(20, 83, 45, 0.05);
+  background: rgba(0, 108, 181, 0.06);
 }
 
 .cedula-area-clicavel:active {
@@ -1083,9 +1083,9 @@ body {
   align-items: center;
   justify-content: center;
   gap: 6px;
-  background: #14532d;
-  color: #fef08a;
-  box-shadow: 0 3px 10px rgba(20, 83, 45, 0.25);
+  background: #006cb5;
+  color: #ffffff;
+  box-shadow: 0 3px 10px rgba(0, 108, 181, 0.25);
   font-family: var(--font-display);
   font-size: 12px;
   font-weight: 900;
@@ -1097,8 +1097,8 @@ body {
 }
 
 @keyframes pulseToque {
-  0%, 100% { transform: scale(1); box-shadow: 0 3px 10px rgba(20, 83, 45, 0.25); }
-  50% { transform: scale(1.04); box-shadow: 0 5px 14px rgba(20, 83, 45, 0.35); }
+  0%, 100% { transform: scale(1); box-shadow: 0 3px 10px rgba(0, 108, 181, 0.25); }
+  50% { transform: scale(1.04); box-shadow: 0 5px 14px rgba(0, 108, 181, 0.35); }
 }
 
 .cedula-toque-alterar {
@@ -1107,7 +1107,7 @@ body {
   gap: 4px;
   font-size: 10.5px;
   font-weight: 800;
-  color: #15803d;
+  color: #006cb5;
   text-transform: uppercase;
   margin-top: 4px;
 }
@@ -1249,9 +1249,9 @@ body.modal-selecao-aberto {
 }
 
 .btn-voltar-selecao:hover {
-  background: #ecfdf5;
-  border-color: #15803d;
-  color: #15803d;
+  background: #eff6ff;
+  border-color: #006cb5;
+  color: #006cb5;
 }
 
 .btn-voltar-arrow {
@@ -1296,8 +1296,8 @@ body.modal-selecao-aberto {
 
 .modal-search-box:focus-within {
   background: #ffffff;
-  border-color: #15803d;
-  box-shadow: 0 0 0 3px rgba(21, 128, 61, 0.15);
+  border-color: #006cb5;
+  box-shadow: 0 0 0 3px rgba(0, 108, 181, 0.18);
 }
 
 .modal-search-icon {
@@ -1376,7 +1376,7 @@ body.modal-selecao-aberto {
 
 .modal-alfabeto-dica .dica-arrow {
   font-size: 14px;
-  color: #15803d;
+  color: #006cb5;
   animation: pulseArrow 1.6s ease-in-out infinite alternate;
 }
 
@@ -1501,20 +1501,20 @@ body.modal-selecao-aberto {
 }
 
 .cand-compact-row:focus-visible {
-  outline: 2px solid #15803d;
-  background: #f0fdf4;
+  outline: 2px solid #006cb5;
+  background: #eff6ff;
 }
 
 .cand-compact-row:active {
-  background: #ecfdf5;
+  background: #dbeafe;
   transform: scale(0.99);
 }
 
 /* Estado Ativo/Selecionado */
 .cand-compact-row.cand-compact-selected {
-  background: #f0fdf4;
-  border-color: #15803d;
-  box-shadow: 0 4px 16px rgba(21, 128, 61, 0.18);
+  background: #eff6ff;
+  border-color: #006cb5;
+  box-shadow: 0 4px 16px rgba(0, 108, 181, 0.18);
 }
 
 .cand-compact-row.cand-compact-selected::before {
@@ -1524,23 +1524,23 @@ body.modal-selecao-aberto {
   top: 0;
   bottom: 0;
   width: 5px;
-  background: #15803d;
+  background: #006cb5;
   border-top-left-radius: 14px;
   border-bottom-left-radius: 14px;
 }
 
 /* Feedback Imediato ao Clicar */
 .cand-compact-row.cand-compact-confirming {
-  background: #ecfdf5 !important;
-  border-color: #10b981 !important;
+  background: #dbeafe !important;
+  border-color: #006cb5 !important;
   transform: scale(1.02) !important;
-  box-shadow: 0 6px 22px rgba(16, 185, 129, 0.3) !important;
+  box-shadow: 0 6px 22px rgba(0, 108, 181, 0.3) !important;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 .cand-compact-row.cand-compact-confirming .cand-compact-numero {
-  background: #15803d !important;
-  color: #fef08a !important;
+  background: #006cb5 !important;
+  color: #ffffff !important;
   transform: scale(1.08);
   transition: all 0.2s ease;
 }
@@ -1563,7 +1563,7 @@ body.modal-selecao-aberto {
 
 .cand-compact-row:hover .cand-compact-photo {
   transform: scale(1.04);
-  border-color: #15803d;
+  border-color: #006cb5;
 }
 
 .cand-compact-photo-placeholder {
@@ -1572,9 +1572,9 @@ body.modal-selecao-aberto {
   min-width: 64px;
   min-height: 64px;
   border-radius: 12px;
-  background: #ecfdf5;
-  border: 2px solid #86efac;
-  color: #15803d;
+  background: #eff6ff;
+  border: 2px solid #93c5fd;
+  color: #006cb5;
   font-family: var(--font-display);
   font-size: 28px;
   font-weight: 900;
@@ -1612,10 +1612,10 @@ body.modal-selecao-aberto {
 
 .cand-compact-selected-badge {
   font-size: 11.5px;
-  color: #15803d;
+  color: #004d82;
   font-weight: 900;
-  background: #dcfce7;
-  border: 1px solid #86efac;
+  background: #dbeafe;
+  border: 1px solid #93c5fd;
   border-radius: 10px;
   padding: 2px 8px;
   line-height: 1;
@@ -1626,7 +1626,7 @@ body.modal-selecao-aberto {
   font-family: var(--font-body);
   font-size: 13px;
   font-weight: 800;
-  color: #15803d;
+  color: #006cb5;
   background: #f1f5f9;
   padding: 2px 8px;
   border-radius: 6px;
@@ -1639,7 +1639,7 @@ body.modal-selecao-aberto {
 
 .cand-compact-partido::before {
   content: "•";
-  color: #15803d;
+  color: #006cb5;
   font-size: 14px;
 }
 
@@ -2662,26 +2662,84 @@ body.modal-selecao-aberto {
   display: flex;
   flex-direction: column;
   align-items: center;
-  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.4));
   width: 100%;
+  max-width: 480px;
 }
 
-.urna-dispenser-img {
-  width: 240px;
-  max-width: 70vw;
-  height: auto;
-  aspect-ratio: 364 / 163;
-  object-fit: contain;
+/* Gabinete Superior da Urna Eletrônica Oficial (Acabamento texturizado cinza-chumbo e borda de hardware) */
+.urna-topo-corpo {
+  width: 100%;
+  background: linear-gradient(180deg, #2b3440 0%, #1e2631 70%, #141a22 100%);
+  border: 2px solid #475569;
+  border-bottom: none;
+  border-radius: 18px 18px 0 0;
+  padding: 14px 20px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.urna-topo-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 8px 18px;
+  width: 100%;
+  justify-content: center;
+}
+
+.urna-topo-icon {
+  font-size: 26px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+}
+
+.urna-topo-titulos {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.urna-topo-tse {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 0.08em;
+  line-height: 1.1;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+}
+
+.urna-topo-sub {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.04em;
+}
+
+/* Guia e Ranhura de Impressão da Urna Eletrônica */
+.urna-slot-guia {
+  width: 100%;
+  background: #0f172a;
+  padding: 8px 14px 4px;
+  margin-top: 10px;
+  border-radius: 8px 8px 0 0;
+  border: 1.5px solid #334155;
+  border-bottom: none;
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.8);
 }
 
 .urna-slot-cut {
   width: 100%;
-  max-width: 580px;
-  height: 8px;
-  background: #091b13;
-  border-radius: 4px;
-  margin-top: -4px;
-  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.9), 0 2px 4px rgba(255, 255, 255, 0.15);
+  height: 9px;
+  background: #000000;
+  border-radius: 5px;
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 1), 0 1px 2px rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 12;
 }
 
 .paper-slip-viewport {
@@ -2689,21 +2747,21 @@ body.modal-selecao-aberto {
   max-height: 400px;
   overflow: hidden;
   position: relative;
-  margin-top: -4px;
+  margin-top: -3px;
   z-index: 5;
   filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.28));
 }
 
-/* Viewport ampliado para acomodar com perfeição a colinha oficial 9:16 saindo da urna */
+/* Viewport ampliado para acomodar com perfeição a colinha oficial deslizando da urna */
 .paper-card-viewport {
   width: 100%;
-  max-width: 440px;
-  max-height: 580px;
+  max-width: 480px;
+  max-height: 600px;
   overflow: hidden;
   position: relative;
-  margin-top: -4px;
+  margin-top: -3px;
   z-index: 5;
-  filter: drop-shadow(0 16px 36px rgba(0, 0, 0, 0.45));
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.6));
 }
 
 .paper-slip-roll {
@@ -2717,39 +2775,41 @@ body.modal-selecao-aberto {
   animation: rollOutPaper 4.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* Card idêntico ao modelo final deslizando para fora da urna */
+/* Card idêntico ao modelo final deslizando suavemente para fora da ranhura da urna */
 .paper-card-roll {
   background: transparent;
   border: none;
   padding: 0;
   transform: translateY(-100%);
-  animation: rollOutPaper 3.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: rollOutPaper 3.6s cubic-bezier(0.12, 0.95, 0.25, 1) forwards;
 }
 
 .paper-card-roll .colinha-vert-card-container {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 @keyframes rollOutPaper {
   0% {
     transform: translateY(-100%);
-    opacity: 0.2;
+    opacity: 0.3;
+    filter: brightness(0.9);
   }
-  15% {
-    transform: translateY(-75%);
+  20% {
+    transform: translateY(-70%);
     opacity: 1;
   }
-  45% {
-    transform: translateY(-40%);
-    opacity: 1;
+  50% {
+    transform: translateY(-35%);
   }
-  75% {
-    transform: translateY(-12%);
-    opacity: 1;
+  80% {
+    transform: translateY(-8%);
   }
   100% {
     transform: translateY(0%);
     opacity: 1;
+    filter: brightness(1);
   }
 }
 
@@ -2956,7 +3016,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 16px 20px;
-  background: #14532d;
+  background: #004d82;
   color: #ffffff;
 }
 
@@ -2964,7 +3024,7 @@ body {
   font-family: var(--font-display);
   font-size: 18px;
   font-weight: 900;
-  color: #fef08a;
+  color: #ffffff;
   letter-spacing: 0.3px;
 }
 
@@ -3007,7 +3067,7 @@ body {
 .guia-topic-box strong {
   font-family: var(--font-display);
   font-size: 14.5px;
-  color: #14532d;
+  color: #004d82;
   display: block;
   margin-bottom: 2px;
 }
@@ -3141,6 +3201,31 @@ body {
   border-color: #ffffff !important;
 }
 
+.btn-acao-rever {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.18) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.45) !important;
+  color: #ffffff !important;
+  font-size: 14px !important;
+  padding: 12px 10px !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  transition: all 0.2s ease;
+}
+
+.btn-acao-rever:hover {
+  background: rgba(255, 255, 255, 0.32) !important;
+  border-color: #ffffff !important;
+  transform: translateY(-2px);
+}
+
 .btn-acao-recomecar {
   flex: 1;
   background: #ffffff;
@@ -3208,11 +3293,11 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-/* Camada da Foto do Candidato (Bruno Ortiz à Direita, Ocupando Todo o Espaço com Impacto) */
+/* Camada da Foto do Candidato (Bruno Ortiz alinhado à Direita, preservando o tamanho original e sem o rosto sob os números) */
 .colinha-vert-candidato-img {
   position: absolute;
   top: 0%;
-  right: -8%;
+  right: -24%;
   height: 100%;
   width: auto;
   object-fit: cover;
@@ -3220,22 +3305,22 @@ body {
   z-index: 1;
   pointer-events: none;
   /* Suave transição branca na base para contraste impecável da logo */
-  mask-image: linear-gradient(to bottom, black 0%, black 80%, rgba(0, 0, 0, 0.5) 89%, transparent 97%);
-  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 80%, rgba(0, 0, 0, 0.5) 89%, transparent 97%);
+  mask-image: linear-gradient(to bottom, black 0%, black 82%, rgba(0, 0, 0, 0.4) 91%, transparent 98%);
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 82%, rgba(0, 0, 0, 0.4) 91%, transparent 98%);
 }
 
-/* Camada da Logomarca Oficial (Fixada no Canto Inferior Direito com Presença Marcante) */
+/* Camada da Logomarca Oficial (Aumentada e com Presença Marcante no Canto Inferior Direito) */
 .colinha-vert-logo-img {
   position: absolute;
-  bottom: 3%;
-  right: 2%;
-  width: 53%;
+  bottom: 2.2%;
+  right: 1.5%;
+  width: 62%;
   height: auto;
   object-fit: contain;
   object-position: bottom right;
   z-index: 2;
   pointer-events: none;
-  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.16));
+  filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.22));
 }
 
 /* Slogan Oficial Abaixo da Logo */
@@ -3306,15 +3391,18 @@ body {
   width: 100%;
 }
 
-/* Título do Cargo: Preto Sólido, Caixa Alta, Fonte Display em Negrito Pesado */
+/* Título do Cargo: Branco Sólido com Sombra Forte e Destaque para máxima legibilidade */
 .colinha-vert-cargo-label {
   font-family: var(--font-display);
   font-size: 3.5cqi;
-  font-weight: 900;
-  color: #000000;
-  letter-spacing: -0.02em;
+  font-weight: 950;
+  color: #ffffff;
+  letter-spacing: -0.01em;
   text-transform: uppercase;
   line-height: 1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9), 0 0 8px rgba(0, 0, 0, 0.75), 0 1px 2px rgba(0, 0, 0, 0.9);
+  -webkit-text-stroke: 0.8px rgba(0, 0, 0, 0.75);
+  paint-order: stroke fill;
 }
 
 .colinha-vert-row-content {
@@ -3350,12 +3438,12 @@ body {
   flex-wrap: nowrap;
 }
 
-/* Nome do Candidato Abaixo dos Números (com borda branca e sombra - NUNCA abreviar) */
+/* Nome do Candidato Abaixo dos Números: Branco Puro com Sombra Forte e Contorno para leitura perfeita */
 .colinha-vert-cand-nome {
   font-family: var(--font-display);
   font-size: 2.5cqi;
-  font-weight: 900;
-  color: #000000;
+  font-weight: 950;
+  color: #ffffff;
   text-transform: uppercase;
   letter-spacing: -0.015em;
   line-height: 1.05;
@@ -3363,9 +3451,10 @@ body {
   overflow: visible;
   word-break: break-word;
   max-width: 46cqi;
-  -webkit-text-stroke: 1.2px #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.95), 0 0 6px rgba(0, 0, 0, 0.85), 0 1px 2px rgba(0, 0, 0, 0.9);
+  -webkit-text-stroke: 0.8px rgba(0, 0, 0, 0.75);
   paint-order: stroke fill;
-  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.7));
 }
 
 /* Ajuste proporcional para nomes longos (ex: ECONOMISTA RENATO GOMES) para exibir 100% completo */
@@ -3374,15 +3463,16 @@ body {
   letter-spacing: -0.02em;
 }
 
-/* Bruno Ortiz em super destaque: posicionado entre o cargo e os números 10222 */
+/* Bruno Ortiz em super destaque: Nome em Branco com Sombra Forte e Contorno Marcante */
 .colinha-vert-cand-nome-destaque {
   font-size: 4.8cqi;
   font-weight: 950;
-  color: #006cb5;
+  color: #ffffff;
   letter-spacing: -0.02em;
-  -webkit-text-stroke: 2px #ffffff;
+  text-shadow: 0 3px 6px rgba(0, 77, 130, 0.95), 0 0 10px rgba(0, 0, 0, 0.85), 0 1px 3px rgba(0, 0, 0, 0.9);
+  -webkit-text-stroke: 1.2px #004d82;
   paint-order: stroke fill;
-  filter: drop-shadow(0 3px 6px rgba(0, 77, 130, 0.5));
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.6));
   margin-top: 0.2cqi;
   margin-bottom: 0.8cqi;
   line-height: 1;
@@ -3412,7 +3502,7 @@ body {
 /* Destaque Máximo: Deputado Estadual - Bruno Ortiz 10222 */
 .colinha-vert-row-depEst {
   position: relative;
-  background: rgba(0, 108, 181, 0.05);
+  background: rgba(0, 108, 181, 0.08);
   border-radius: 10px;
   padding: 0.8cqi 0.8cqi 1cqi;
   margin: -0.8cqi -0.8cqi 0;
@@ -3420,9 +3510,11 @@ body {
 }
 
 .colinha-vert-row-depEst .colinha-vert-cargo-label {
-  color: #004d82;
+  color: #ffffff;
   font-size: 3.8cqi;
   letter-spacing: 0.02em;
+  text-shadow: 0 2px 5px rgba(0, 77, 130, 0.95), 0 0 8px rgba(0, 0, 0, 0.8);
+  -webkit-text-stroke: 0.8px #004d82;
 }
 
 .colinha-vert-row-depEst .colinha-vert-digit-box {

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Painel de Inteligência — Bruno Ortiz 10222</title>
+  <title>Painel Executivo — Bruno Ortiz 10222</title>
   <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
   <meta name="googlebot" content="noindex, nofollow">
   <meta name="referrer" content="no-referrer">
@@ -13,26 +13,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #031e10;
+      --bg: #00172c;
       --card-bg: rgba(255, 255, 255, 0.05);
-      --card-border: rgba(255, 255, 255, 0.1);
-      --green-primary: #10b981;
-      --green-glow: rgba(16, 185, 129, 0.3);
-      --gold: #f59e0b;
-      --text: #f9fafb;
-      --text-muted: #9ca3af;
+      --card-border: rgba(255, 255, 255, 0.12);
+      --blue-primary: #006cb5;
+      --blue-glow: rgba(0, 108, 181, 0.35);
+      --blue-light: #38bdf8;
+      --gold: #ffcc29;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
       background: var(--bg);
+      background-image: radial-gradient(circle at 10% 10%, rgba(0, 108, 181, 0.15) 0%, transparent 60%);
       color: var(--text);
       min-height: 100vh;
       padding: 24px 16px 48px;
     }
 
-    .container { max-width: 1100px; margin: 0 auto; }
+    .container { max-width: 1140px; margin: 0 auto; }
 
     /* Header */
     .dashboard-header {
@@ -83,11 +85,11 @@
     }
 
     .btn-excel {
-      background: linear-gradient(135deg, #059669 0%, #047857 100%);
+      background: linear-gradient(135deg, #0284c7 0%, #006cb5 100%);
       color: #ffffff;
-      box-shadow: 0 4px 14px var(--green-glow);
+      box-shadow: 0 4px 14px var(--blue-glow);
     }
-    .btn-excel:hover { transform: translateY(-1px); }
+    .btn-excel:hover { transform: translateY(-1px); filter: brightness(1.1); }
 
     .btn-refresh {
       background: rgba(255, 255, 255, 0.08);
@@ -130,7 +132,7 @@
 
     .kpi-sub {
       font-size: 12px;
-      color: var(--green-primary);
+      color: var(--blue-light);
     }
 
     /* Grids de Rankings */
@@ -192,7 +194,7 @@
 
     .progress-bar-fill {
       height: 100%;
-      background: linear-gradient(90deg, #10b981 0%, #34d399 100%);
+      background: linear-gradient(90deg, #006cb5 0%, #38bdf8 100%);
       border-radius: 999px;
       transition: width 0.4s ease;
     }
@@ -222,12 +224,12 @@
     td {
       padding: 12px 14px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      color: #e5e7eb;
+      color: #e2e8f0;
     }
 
     .badge-eleitor {
-      background: rgba(16, 185, 129, 0.2);
-      color: #34d399;
+      background: rgba(0, 108, 181, 0.25);
+      color: #7dd3fc;
       padding: 3px 8px;
       border-radius: 6px;
       font-weight: 700;
@@ -235,8 +237,8 @@
     }
 
     .badge-acao {
-      background: rgba(245, 158, 11, 0.15);
-      color: #fbbf24;
+      background: rgba(255, 204, 41, 0.15);
+      color: #ffcc29;
       padding: 2px 7px;
       border-radius: 4px;
       font-size: 11px;
@@ -253,32 +255,36 @@
       padding: 32px 24px;
       text-align: center;
       backdrop-filter: blur(14px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     }
 
     .auth-input {
       width: 100%;
       padding: 14px 16px;
       border-radius: 12px;
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(0, 0, 0, 0.35);
       border: 1.5px solid var(--card-border);
       color: #ffffff;
       font-size: 15px;
       margin: 18px 0 14px;
       outline: none;
+      transition: border-color 0.2s;
     }
-    .auth-input:focus { border-color: var(--green-primary); }
+    .auth-input:focus { border-color: var(--blue-primary); }
 
     .auth-btn {
       width: 100%;
       padding: 14px;
       border-radius: 12px;
-      background: var(--green-primary);
+      background: linear-gradient(135deg, #0284c7 0%, #006cb5 100%);
       color: #ffffff;
       font-weight: 800;
       font-size: 15px;
       border: none;
       cursor: pointer;
+      transition: filter 0.2s;
     }
+    .auth-btn:hover { filter: brightness(1.1); }
   </style>
 </head>
 <body>
@@ -286,13 +292,13 @@
   <!-- Tela de Acesso Protegido -->
   <div id="auth-screen">
     <div style="font-size: 40px; margin-bottom: 12px;">🔒</div>
-    <h2 style="font-family: 'Outfit'; font-weight: 800; color: #ffffff;">Inteligência Eleitoral 2026</h2>
-    <p style="color: var(--text-muted); font-size: 13px; margin-top: 6px;">Digite a senha de acesso para visualizar os relatórios e exportar dados.</p>
+    <h2 style="font-family: 'Outfit'; font-weight: 800; color: #ffffff;">Inteligência Bruno Ortiz 10222</h2>
+    <p style="color: var(--text-muted); font-size: 13px; margin-top: 6px;">Digite a senha mestra para visualizar as métricas em tempo real e exportar dados.</p>
     <form id="form-auth">
-      <input type="password" id="input-token" class="auth-input" placeholder="Senha de acesso..." required autofocus>
-      <button type="submit" class="auth-btn">Entrar no Painel</button>
+      <input type="password" id="input-token" class="auth-input" placeholder="Senha mestra de acesso..." required autofocus>
+      <button type="submit" class="auth-btn">Acessar Painel</button>
     </form>
-    <div id="auth-error" style="color: #ef4444; font-size: 12px; margin-top: 10px; display: none;">Senha incorreta. Tente novamente.</div>
+    <div id="auth-error" style="color: #ef4444; font-size: 12px; margin-top: 10px; display: none;">Chave incorreta. Tente novamente.</div>
   </div>
 
   <!-- Dashboard Principal -->
@@ -300,8 +306,8 @@
     
     <header class="dashboard-header">
       <div class="title-group">
-        <h1>📊 Painel de Inteligência — Bruno Ortiz 10222</h1>
-        <p>Acompanhamento em tempo real de votos, dobradinhas e engajamento da colinha oficial.</p>
+        <h1>📊 Painel Executivo — Bruno Ortiz 10222</h1>
+        <p>Monitoramento em tempo real de colinhas geradas, dobradinhas federais e engajamento da campanha.</p>
       </div>
       <div class="actions-bar">
         <button class="btn btn-refresh" id="btn-atualizar">🔄 Atualizar</button>
@@ -317,19 +323,19 @@
         <div class="kpi-sub">Montadas no sistema</div>
       </div>
       <div class="kpi-card">
-        <div class="kpi-label">Eleitores com Nome</div>
-        <div class="kpi-value" id="kpi-identificados" style="color: #34d399;">0</div>
-        <div class="kpi-sub">Personalizaram com nome</div>
+        <div class="kpi-label">Hoje</div>
+        <div class="kpi-value" id="kpi-hoje" style="color: #38bdf8;">0</div>
+        <div class="kpi-sub">Montadas nas últimas 24h</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Compartilhamentos</div>
+        <div class="kpi-value" id="kpi-compartilhamentos" style="color: #34d399;">0</div>
+        <div class="kpi-sub">Enviadas no WhatsApp</div>
       </div>
       <div class="kpi-card">
         <div class="kpi-label">Fotos Baixadas</div>
-        <div class="kpi-value" id="kpi-salvas" style="color: #60a5fa;">0</div>
+        <div class="kpi-value" id="kpi-downloads" style="color: #ffcc29;">0</div>
         <div class="kpi-sub">Salvas para levar à urna</div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-label">Compartilhadas</div>
-        <div class="kpi-value" id="kpi-zap" style="color: #22c55e;">0</div>
-        <div class="kpi-sub">Enviadas no WhatsApp</div>
       </div>
     </section>
 
@@ -338,7 +344,7 @@
       <!-- Deputados Federais Mais Votados com Bruno Ortiz -->
       <div class="panel-box">
         <h3>🏛️ Dobradinhas: Deputados Federais</h3>
-        <div class="ranking-list" id="rank-dep-est">
+        <div class="ranking-list" id="rank-dep-fed">
           <div style="color: var(--text-muted); font-size: 13px;">Carregando dados...</div>
         </div>
       </div>
@@ -368,6 +374,23 @@
       </div>
     </section>
 
+    <!-- Cidades e Dispositivos -->
+    <section class="rankings-grid">
+      <div class="panel-box">
+        <h3>📍 Cidades / Regiões com Maior Atividade</h3>
+        <div class="ranking-list" id="rank-cidades">
+          <div style="color: var(--text-muted); font-size: 13px;">Carregando dados...</div>
+        </div>
+      </div>
+
+      <div class="panel-box">
+        <h3>📱 Dispositivos Utilizados</h3>
+        <div class="ranking-list" id="rank-dispositivos">
+          <div style="color: var(--text-muted); font-size: 13px;">Carregando dados...</div>
+        </div>
+      </div>
+    </section>
+
     <!-- Tabela com Últimas Colinhas Montadas -->
     <section class="panel-box" style="margin-bottom: 24px;">
       <h3>📋 Últimas Colinhas Registradas (Tempo Real)</h3>
@@ -377,17 +400,18 @@
             <tr>
               <th>Data/Hora</th>
               <th>Eleitor</th>
+              <th>Dep. Federal</th>
               <th>Dep. Estadual</th>
               <th>Senadores</th>
               <th>Governador</th>
               <th>Presidente</th>
               <th>Ação</th>
-              <th>Dispositivo</th>
+              <th>Cidade</th>
             </tr>
           </thead>
           <tbody id="tbody-ultimas">
             <tr>
-              <td colspan="8" style="text-align: center; color: var(--text-muted); padding: 24px;">Nenhuma colinha registrada ainda.</td>
+              <td colspan="9" style="text-align: center; color: var(--text-muted); padding: 24px;">Nenhuma colinha registrada ainda.</td>
             </tr>
           </tbody>
         </table>
@@ -396,6 +420,6 @@
 
   </div>
 
-  <script src="painel.js?v=50"></script>
+  <script src="painel.js?v=60"></script>
 </body>
 </html>

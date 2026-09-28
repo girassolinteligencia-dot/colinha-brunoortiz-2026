@@ -238,7 +238,7 @@
 
       let photoHtml = "";
       // cand.foto_url already contains 'fotos_tse/' in the JSON dataset
-      if (cfg.id !== 'depFed' && cand && cand.foto_url && cand.foto_url !== "") {
+      if (cand && cand.foto_url && cand.foto_url !== "") {
         photoHtml = `<img src="${cand.foto_url}" class="colinha-vert-minifoto" alt="${cand.urna || ''}" onerror="this.style.display='none'">`;
       }
 
@@ -377,10 +377,8 @@
 
         if (dispararImpressaoSeCompleto) {
           enviarTelemetriaColinha("gerou");
-          // Transição direta e imediata para a colinha final oficial
-          conclusaoSection.style.display = "block";
-          conclusaoSection.scrollIntoView({ behavior: "smooth", block: "start" });
-          showToast("🎉 Sua colinha oficial com Bruno Ortiz 10222 está pronta!");
+          // Dispara a animação visual hiper-realista da colinha saindo de dentro da urna eletrônica
+          dispararAnimacaoImpressaoUrna();
         } else {
           conclusaoSection.style.display = "block";
         }
@@ -965,31 +963,31 @@
     ctx.fillStyle = "#ffffff";
     ctx.fillRect(0, 0, W, H);
 
-    // Foto do Candidato Isolada (Bruno Ortiz à Direita, enquadramento amplo e sem vazios)
+    // Foto do Candidato Isolada (Bruno Ortiz alinhado à Direita, preservando o tamanho original e sem o rosto sob os números)
     const fotoBruno = await carregarImagemAsync("assets/bruno-ortiz.png");
     if (fotoBruno) {
       const imgH = H * 1.0;
       const imgW = imgH * (fotoBruno.width / fotoBruno.height);
-      const imgX = W * 1.08 - imgW; // Enquadra ocupando a coluna direita com impacto
+      const imgX = W * 1.24 - imgW; // Desloca para a direita sem alterar tamanho, liberando o rosto
       const imgY = 0;
       ctx.drawImage(fotoBruno, imgX, imgY, imgW, imgH);
 
       // Suave transição branca na base para a logo brilhar com contraste
-      const gradFade = ctx.createLinearGradient(0, H * 0.78, 0, H * 0.98);
+      const gradFade = ctx.createLinearGradient(0, H * 0.80, 0, H * 0.98);
       gradFade.addColorStop(0, "rgba(255, 255, 255, 0)");
       gradFade.addColorStop(0.5, "rgba(255, 255, 255, 0.75)");
       gradFade.addColorStop(1, "rgba(255, 255, 255, 1)");
       ctx.fillStyle = gradFade;
-      ctx.fillRect(W * 0.44, H * 0.76, W * 0.56, H * 0.24);
+      ctx.fillRect(W * 0.40, H * 0.76, W * 0.60, H * 0.24);
     }
 
     // Logo Oficial no Canto Inferior Direito (Ampliada e Bem Posicionada)
     const logoBruno = await carregarImagemAsync("assets/bruno-ortiz-logo.png");
     if (logoBruno) {
-      const logoW = W * 0.53;
+      const logoW = W * 0.62;
       const logoH = logoW * (logoBruno.height / logoBruno.width);
-      const logoX = W - logoW - (W * 0.015);
-      const logoY = H - logoH - (H * 0.025);
+      const logoX = W - logoW - (W * 0.012);
+      const logoY = H - logoH - (H * 0.022);
       ctx.drawImage(logoBruno, logoX, logoY, logoW, logoH);
     }
 
@@ -1064,7 +1062,7 @@
       const isDepEst = cfg.id === 'depEst';
       const curBoxH = isDepEst ? 148 : 115;
 
-      // 2.1 TÍTULO DO CARGO
+      // 2.1 TÍTULO DO CARGO (Branco com Sombra Forte e Contorno para leitura perfeita)
       let cargoTitle = cfg.cargo.toUpperCase();
       if (cfg.id === "sen1") cargoTitle = "SENADOR 1";
       else if (cfg.id === "sen2") cargoTitle = "SENADOR 2";
@@ -1072,8 +1070,19 @@
       ctx.save();
       ctx.textAlign = "left";
       ctx.textBaseline = "top";
-      ctx.fillStyle = isDepEst ? "#004d82" : "#000000";
       ctx.font = isDepEst ? '950 36px "Outfit", sans-serif' : '950 32px "Outfit", sans-serif';
+      
+      // Sombra e Contorno forte
+      ctx.shadowColor = "rgba(0, 0, 0, 0.9)";
+      ctx.shadowBlur = 8;
+      ctx.shadowOffsetY = 3;
+      ctx.strokeStyle = "rgba(0, 0, 0, 0.85)";
+      ctx.lineWidth = 4;
+      ctx.lineJoin = "round";
+      ctx.strokeText(cargoTitle, startX, geom.labelY);
+
+      // Preenchimento branco
+      ctx.fillStyle = "#ffffff";
       ctx.fillText(cargoTitle, startX, geom.labelY);
       ctx.restore();
 
@@ -1083,20 +1092,20 @@
         ctx.textAlign = "left";
         ctx.textBaseline = "top";
         ctx.font = '950 46px "Outfit", sans-serif';
-        ctx.shadowColor = "rgba(0, 77, 130, 0.45)";
+        ctx.shadowColor = "rgba(0, 77, 130, 0.9)";
         ctx.shadowBlur = 10;
         ctx.shadowOffsetY = 4;
 
-        // Contorno branco de destaque
-        ctx.strokeStyle = "#ffffff";
-        ctx.lineWidth = 8;
+        // Contorno escuro azul marinho
+        ctx.strokeStyle = "#004d82";
+        ctx.lineWidth = 7;
         ctx.lineJoin = "round";
         ctx.miterLimit = 2;
         ctx.strokeText("BRUNO ORTIZ", startX, geom.nameY);
 
-        // Preenchimento azul oficial
+        // Preenchimento branco puro de alto impacto
         ctx.shadowColor = "transparent";
-        ctx.fillStyle = "#006cb5";
+        ctx.fillStyle = "#ffffff";
         ctx.fillText("BRUNO ORTIZ", startX, geom.nameY);
         ctx.restore();
       }
@@ -1162,7 +1171,7 @@
         }
       }
 
-      // 2.3 NOME DOS DEMAIS CANDIDATOS (Abaixo das caixas de voto correspondentes)
+      // 2.3 NOME DOS DEMAIS CANDIDATOS (Branco com Sombra Forte e Contorno Escuro)
       if (!isDepEst && cand && cand.urna) {
         ctx.save();
         ctx.textAlign = "left";
@@ -1176,20 +1185,20 @@
           ctx.font = `900 ${nameFontSize}px "Outfit", sans-serif`;
         }
 
-        ctx.shadowColor = "rgba(0, 0, 0, 0.30)";
-        ctx.shadowBlur = 6;
+        ctx.shadowColor = "rgba(0, 0, 0, 0.95)";
+        ctx.shadowBlur = 8;
         ctx.shadowOffsetY = 3;
 
-        // Contorno branco de destaque
-        ctx.strokeStyle = "#ffffff";
-        ctx.lineWidth = 5;
+        // Contorno escuro de contraste
+        ctx.strokeStyle = "rgba(0, 0, 0, 0.85)";
+        ctx.lineWidth = 4.5;
         ctx.lineJoin = "round";
         ctx.miterLimit = 2;
         ctx.strokeText(displayName, currentX, geom.boxY + curBoxH + 7);
 
-        // Preenchimento preto sólido
+        // Preenchimento branco sólido
         ctx.shadowColor = "transparent";
-        ctx.fillStyle = "#000000";
+        ctx.fillStyle = "#ffffff";
         ctx.fillText(displayName, currentX, geom.boxY + curBoxH + 7);
         ctx.restore();
       }

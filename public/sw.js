@@ -1,4 +1,4 @@
-const CACHE_NAME = 'colinha-bruno-ortiz-v1';
+const CACHE_NAME = 'colinha-bruno-ortiz-v4';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
