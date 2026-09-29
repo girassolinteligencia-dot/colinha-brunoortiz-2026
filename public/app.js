@@ -169,6 +169,10 @@
   // ---------- Carregamento do Dataset Enxuto ----------
   // ---------- Carregamento do Dataset Enxuto ----------
   async function initDados() {
+    // Renderiza a estrutura da tela imediatamente para exibição instantânea sem delay visual
+    renderSlots();
+    atualizarProgresso();
+
     try {
       const res = await fetch("data.json");
       const payload = await res.json();
