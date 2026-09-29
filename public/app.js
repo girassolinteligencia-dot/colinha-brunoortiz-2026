@@ -180,6 +180,7 @@
       if (payload && payload.candidates) {
         // Converte do formato { candidates: { deputadoFederal: [...], ... } } para array plano
         const list = [];
+        const seen = new Set();
         const cargoMap = {
           deputadoFederal: "Deputado Federal",
           deputadoEstadual: "Deputado Estadual",
@@ -192,21 +193,34 @@
         for (const [key, cands] of Object.entries(payload.candidates)) {
           if (Array.isArray(cands)) {
             cands.forEach(c => {
-              list.push({
-                sq: c.id ? String(c.id).replace("tse-", "") : c.number,
-                nr: String(c.number),
-                urna: c.ballotName || c.name,
-                cargo: cargoMap[key] || c.office,
-                partido_sigla: c.party || "",
-                foto_url: c.photo || "",
-                situacao: "Deferido"
-              });
+              const cargoNome = cargoMap[key] || c.office;
+              const candNr = String(c.number);
+              const chaveUnica = `${cargoNome}_${candNr}`;
+
+              if (!seen.has(chaveUnica)) {
+                seen.add(chaveUnica);
+                list.push({
+                  sq: c.id ? String(c.id).replace("tse-", "") : c.number,
+                  nr: candNr,
+                  urna: c.ballotName || c.name,
+                  cargo: cargoNome,
+                  partido_sigla: c.party || "",
+                  foto_url: c.photo || "",
+                  situacao: "Deferido"
+                });
+              }
             });
           }
         }
         CANDIDATOS = list;
       } else if (Array.isArray(payload)) {
-        CANDIDATOS = payload;
+        const seen = new Set();
+        CANDIDATOS = payload.filter(c => {
+          const k = `${c.cargo}_${c.nr}`;
+          if (seen.has(k)) return false;
+          seen.add(k);
+          return true;
+        });
       }
     } catch (err) {
       console.warn("Falha ao carregar base de candidatos:", err);
