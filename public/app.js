@@ -29,6 +29,7 @@
   let CANDIDATOS = [];
   let colinhaState = carregarColinha();
   let slotAtivo = null;
+  let modoEdicao = false; // Permite navegar livremente e trocar candidatos sem fechar a tela prematuramente
 
   // ---------- Utilitários de Segurança e Formatação ----------
   function escapeHtml(str) {
@@ -378,8 +379,10 @@
     renderizarStepperFunil();
     renderizarVitrineNicho();
 
+    const btnVoltarColinha = document.getElementById("btn-voltar-colinha");
+
     if (conclusaoSection) {
-      if (preenchidos === 6) {
+      if (!modoEdicao && preenchidos === 6) {
         if (welcomeSection) welcomeSection.style.display = "none";
         renderizarColinhaFinalPreview();
         fecharSelecaoCandidato();
@@ -391,6 +394,9 @@
         // Oculta o header da página na conclusão para evitar redundância visual da logo
         if (appHeader) {
           appHeader.style.display = "none";
+        }
+        if (btnVoltarColinha) {
+          btnVoltarColinha.style.display = "none";
         }
 
         if (dispararImpressaoSeCompleto) {
@@ -405,8 +411,11 @@
         if (appHeader) {
           appHeader.style.display = "block";
         }
+        if (btnVoltarColinha) {
+          btnVoltarColinha.style.display = modoEdicao ? "inline-flex" : "none";
+        }
 
-        if (!boasVindasVista && preenchidos <= 1) {
+        if (!boasVindasVista && preenchidos <= 1 && !modoEdicao) {
           if (welcomeSection) welcomeSection.style.display = "block";
           if (vitrineContainer) {
             const nicho = vitrineContainer.querySelector(".nicho-vitrine-frame");
@@ -921,7 +930,7 @@
 
           // 2. Aguarda 400ms para o eleitor absorver a confirmação visual antes de fechar o modal
           setTimeout(() => {
-            salvarColinha(vaiCompletar);
+            salvarColinha(!modoEdicao && vaiCompletar);
             fecharSelecaoCandidato();
 
             // 3. Efeito visual fluido de avanço na cédula central
@@ -932,10 +941,13 @@
               centerEl.classList.add("cedula-animar-troca");
             }
 
-            showToast(`✓ ${escolhido.urna} escolhido com sucesso!`);
+            showToast(`✓ ${escolhido.urna} trocado com sucesso!`);
 
-            // 4. Se ainda não completou os 6 votos, transiciona suavemente para o próximo cargo após 450ms
-            if (!vaiCompletar) {
+            if (modoEdicao) {
+              // No modo de edição, apenas atualiza a cédula e o stepper para continuar navegando livremente
+              atualizarProgresso();
+            } else if (!vaiCompletar) {
+              // Se ainda está no fluxo inicial e não completou, transiciona suavemente para o próximo cargo após 450ms
               setTimeout(() => {
                 avancarParaProximoCargo();
               }, 450);
@@ -1335,6 +1347,7 @@
         avisoNome.style.display = "none";
       }
 
+      modoEdicao = false;
       etapaAtual = 0; // Inicia na escolha do 1º voto (Deputado Federal)
       salvarColinha();
       atualizarProgresso();
@@ -1532,23 +1545,19 @@
     const btnEditarVotos = document.getElementById("btn-editar-votos");
     if (btnEditarVotos) {
       btnEditarVotos.addEventListener("click", () => {
+        modoEdicao = true; // Ativa modo de edição: permite navegar entre cédulas e trocar apenas o que quiser
         etapaAtual = 0; // Leva diretamente para o 1º voto (Deputado Federal)
-        const conclusaoSection = document.getElementById("conclusao-section");
-        const vitrineContainer = document.querySelector(".container-vitrine");
-        const appHeader = document.querySelector(".app-header");
-        if (conclusaoSection) conclusaoSection.style.display = "none";
-        if (vitrineContainer) {
-          vitrineContainer.style.display = "flex";
-          const nicho = vitrineContainer.querySelector(".nicho-vitrine-frame");
-          if (nicho) nicho.style.display = "block";
-        }
-        if (appHeader) {
-          appHeader.style.display = "block";
-          const stepper = appHeader.querySelector(".stepper-funil");
-          if (stepper) stepper.style.display = "flex";
-        }
-        renderizarStepperFunil();
-        renderizarVitrineNicho();
+        atualizarProgresso();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    }
+
+    // Botão no Header para retornar à colinha pronta quando estiver em modo de edição
+    const btnVoltarColinha = document.getElementById("btn-voltar-colinha");
+    if (btnVoltarColinha) {
+      btnVoltarColinha.addEventListener("click", () => {
+        modoEdicao = false; // Finaliza modo de edição e reexibe a colinha pronta
+        atualizarProgresso();
         window.scrollTo({ top: 0, behavior: "smooth" });
       });
     }

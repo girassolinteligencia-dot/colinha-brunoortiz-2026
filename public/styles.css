@@ -2157,6 +2157,72 @@ body.modal-selecao-aberto {
   margin-top: 16px;
 }
 
+/* Crédito Ultra-Discreto Girassol Inteligência na Tela Final */
+.conclusao-credito-girassol {
+  margin-top: 26px;
+  margin-bottom: 6px;
+  text-align: center;
+  width: 100%;
+}
+
+.conclusao-credito-girassol a {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.45);
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  text-decoration: none;
+  padding: 4px 10px;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.conclusao-credito-girassol a strong {
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.conclusao-credito-girassol a:hover {
+  color: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.conclusao-credito-girassol a:hover strong {
+  color: #38bdf8;
+}
+
+/* Botão de Ver Colinha Pronta no Topo durante o Modo de Edição */
+.btn-voltar-colinha-pronta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #15803d;
+  border: 1.5px solid #4ade80;
+  color: #ffffff;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 850;
+  letter-spacing: 0.6px;
+  padding: 8px 18px;
+  border-radius: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25), 0 0 10px rgba(74, 222, 128, 0.3);
+  transition: all 0.2s ease;
+}
+
+.btn-voltar-colinha-pronta:hover {
+  background: #16a34a;
+  border-color: #86efac;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(22, 163, 74, 0.45);
+}
+
+.btn-voltar-colinha-pronta:active {
+  transform: translateY(0);
+}
+
 .btn-link-discreto {
   background: none;
   border: none;
