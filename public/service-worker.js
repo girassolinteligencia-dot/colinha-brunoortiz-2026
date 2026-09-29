@@ -1,4 +1,4 @@
-const CACHE_NAME = 'colinha-bruno-ortiz-v4';
+const CACHE_NAME = 'colinha-bruno-ortiz-v5';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -8,6 +8,7 @@ const ASSETS_TO_CACHE = [
   './manifest.json',
   './assets/bruno-ortiz.png',
   './assets/bruno-ortiz-logo.png',
+  './assets/og-share-card.png',
   './assets/icon-192.png',
   './assets/icon-512.png'
 ];
